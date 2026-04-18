@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ───────── CSS Custom Properties ───────── */
+@layer base {
+  :root {
+    --max-w: 1240px;
+    --t-hero: clamp(48px, 7.5vw, 96px);
+    --t-display: clamp(36px, 4.8vw, 64px);
+    --t-section: clamp(28px, 3.2vw, 44px);
+    --t-sub: clamp(18px, 1.4vw, 22px);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg text-ink font-sans antialiased;
+    font-size: 16.5px;
+    line-height: 1.55;
+    font-feature-settings: 'ss01', 'cv11';
+  }
+
+  /* Headings use sans by default with tight tracking — serif is opt-in via .serif */
+  h1, h2, h3, h4 {
+    @apply font-medium text-ink;
+    letter-spacing: -0.02em;
+  }
+  h1 {
+    font-size: var(--t-hero);
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+  }
+  h2 {
+    font-size: var(--t-display);
+    line-height: 1.08;
+    letter-spacing: -0.028em;
+  }
+  h3 {
+    font-size: var(--t-section);
+    line-height: 1.15;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-[3px] outline-indigo-3 rounded-sm;
+    outline-style: solid;
+  }
+
+  /* Honour user motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ───────── Reusable components ───────── */
+@layer components {
+  .serif {
+    @apply font-serif italic font-normal;
+    letter-spacing: -0.01em;
+  }
+
+  .lead {
+    @apply text-ink-3 font-normal max-w-[620px];
+    font-size: var(--t-sub);
+    line-height: 1.5;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-[10px] font-mono font-medium text-ink-3;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .section {
+    @apply border-t border-line;
+    padding-top: clamp(72px, 9vw, 128px);
+    padding-bottom: clamp(72px, 9vw, 128px);
+  }
+  .section-tight {
+    padding-top: clamp(56px, 6vw, 88px);
+    padding-bottom: clamp(56px, 6vw, 88px);
+  }
+
+  /* Glass nav backdrop */
+  .nav-glass {
+    background: rgba(250, 250, 247, 0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+  }
+}
+
+/* ───────── Reveal-on-scroll utility ───────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s cubic-bezier(0.2, 0.6, 0.2, 1),
+              transform 0.7s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
