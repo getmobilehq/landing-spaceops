@@ -16,6 +16,7 @@ export function ContactForm() {
     role: '',
     buildings: '',
     message: '',
+    website: '',
   });
 
   const update = (field: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -76,6 +77,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
+        <label>
+          Website
+          <input
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={form.website}
+            onChange={update('website')}
+          />
+        </label>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         <Field label="Full name" required>
           <input

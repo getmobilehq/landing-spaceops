@@ -8,12 +8,23 @@ type ContactBody = {
   role?: string;
   buildings?: string;
   message?: string;
+  website?: string;
 };
+
+const MAX_BODY_BYTES = 16_384;
+const FIELD_CAPS = { name: 200, email: 320, company: 200, role: 80, buildings: 40, message: 5000 };
 
 const escape = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+const oneLine = (s: string) => s.replace(/[\r\n]+/g, ' ').trim();
+
 export async function POST(req: Request) {
+  const contentLength = Number(req.headers.get('content-length') ?? 0);
+  if (contentLength > MAX_BODY_BYTES) {
+    return NextResponse.json({ error: 'Payload too large.' }, { status: 413 });
+  }
+
   let body: ContactBody;
   try {
     body = (await req.json()) as ContactBody;
@@ -21,10 +32,18 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 });
   }
 
-  const { name, email, company = '', role = '', buildings = '', message = '' } = body;
+  if (body.website && body.website.trim() !== '') {
+    return NextResponse.json({ ok: true });
+  }
 
-  // Basic validation
-  if (!name?.trim() || !email?.trim()) {
+  const name = (body.name ?? '').slice(0, FIELD_CAPS.name);
+  const email = (body.email ?? '').slice(0, FIELD_CAPS.email);
+  const company = (body.company ?? '').slice(0, FIELD_CAPS.company);
+  const role = (body.role ?? '').slice(0, FIELD_CAPS.role);
+  const buildings = (body.buildings ?? '').slice(0, FIELD_CAPS.buildings);
+  const message = (body.message ?? '').slice(0, FIELD_CAPS.message);
+
+  if (!name.trim() || !email.trim()) {
     return NextResponse.json({ error: 'Name and email are required.' }, { status: 400 });
   }
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -35,17 +54,16 @@ export async function POST(req: Request) {
   const fromEmail = process.env.CONTACT_FROM_EMAIL;
   const toEmail = process.env.CONTACT_TO_EMAIL;
 
-  // If credentials aren’t configured, log and return success.
-  // This lets the form work in dev without Resend set up.
   if (!apiKey || !fromEmail || !toEmail) {
     console.warn(
-      '[contact] Resend not configured — logging submission instead. Set RESEND_API_KEY, CONTACT_FROM_EMAIL, CONTACT_TO_EMAIL.',
+      '[contact] Resend not configured — submission accepted but no email sent. Set RESEND_API_KEY, CONTACT_FROM_EMAIL, CONTACT_TO_EMAIL.',
     );
-    console.log('[contact submission]', { name, email, company, role, buildings, message });
     return NextResponse.json({ ok: true });
   }
 
   const resend = new Resend(apiKey);
+  const safeSubjectName = oneLine(name);
+  const safeSubjectCompany = oneLine(company);
 
   const html = `
     <!DOCTYPE html>
@@ -71,7 +89,7 @@ export async function POST(req: Request) {
       from: fromEmail,
       to: toEmail,
       replyTo: email,
-      subject: `SpaceOPS contact — ${name}${company ? ` (${company})` : ''}`,
+      subject: `SpaceOPS contact — ${safeSubjectName}${safeSubjectCompany ? ` (${safeSubjectCompany})` : ''}`,
       html,
     });
     return NextResponse.json({ ok: true });
