@@ -55,7 +55,7 @@ export default function PrivacyPage() {
         <p>
           Subject to applicable law (GDPR, CCPA, Virginia CDPA, and others), you may have the
           right to access, correct, export, or delete your personal data. Contact
-          privacy@onyxspaceops.com for requests.
+          support@onyxspaceops.com for requests.
         </p>
       </LegalSection>
       <LegalSection title="Cookies">
@@ -68,8 +68,8 @@ export default function PrivacyPage() {
       <LegalSection title="Contact">
         <p>
           For any privacy-related enquiries, contact{' '}
-          <a href="mailto:privacy@onyxspaceops.com" className="text-indigo-3 underline underline-offset-2">
-            privacy@onyxspaceops.com
+          <a href="mailto:support@onyxspaceops.com" className="text-indigo-3 underline underline-offset-2">
+            support@onyxspaceops.com
           </a>
           .
         </p>

@@ -75,7 +75,7 @@ export function Hero() {
         <div className="max-w-[920px]">
           <Eyebrow className="mb-5 animate-fade-up">Facility operations, rebuilt</Eyebrow>
           <h1 className="mb-8 animate-fade-up" style={{ animationDelay: '0.04s' }}>
-            The <span className="serif">operating system</span>
+            The <span className="serif">Work Planning Tool</span>
             <br />
             for facility management.
           </h1>

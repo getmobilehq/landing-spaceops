@@ -2,7 +2,7 @@ export const siteConfig = {
   name: 'SpaceOPS',
   domain: 'onyxspaceops.com',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://onyxspaceops.com',
-  tagline: 'The operating system for facility management.',
+  tagline: 'The Work Planning Tool for facility management.',
   parent: {
     name: 'Onyx Building Solutions',
     tagline: 'Solutions for facilities professionals, by facilities professionals.',

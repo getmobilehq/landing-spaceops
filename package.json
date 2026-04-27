@@ -2,7 +2,7 @@
   "name": "spaceops-site",
   "version": "1.0.0",
   "private": true,
-  "description": "Marketing site for SpaceOPS — the operating system for facility management.",
+  "description": "Marketing site for SpaceOPS — the Work Planning Tool for facility management.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

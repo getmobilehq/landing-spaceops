@@ -78,7 +78,7 @@ export async function POST(req: Request) {
   } catch (err) {
     console.error('[contact] Resend error:', err);
     return NextResponse.json(
-      { error: 'Could not send message. Please try again or email sales@onyxspaceops.com directly.' },
+      { error: 'Could not send message. Please try again or email support@onyxspaceops.com directly.' },
       { status: 500 },
     );
   }

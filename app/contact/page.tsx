@@ -26,8 +26,7 @@ export default function ContactPage() {
             </p>
 
             <div className="flex flex-col gap-8">
-              <InfoBlock label="Sales" value="sales@onyxspaceops.com" href="mailto:sales@onyxspaceops.com" />
-              <InfoBlock label="Support" value="support@onyxspaceops.com" href="mailto:support@onyxspaceops.com" />
+              <InfoBlock label="Email" value="support@onyxspaceops.com" href="mailto:support@onyxspaceops.com" />
               <InfoBlock label="Or, skip the form" value="Start a free account now →" href="https://app.onyxspaceops.com/signup" external />
             </div>
           </div>

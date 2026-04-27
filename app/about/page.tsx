@@ -6,7 +6,7 @@ import { buildMetadata } from '@/lib/utils';
 export const metadata = buildMetadata({
   title: 'About',
   description:
-    'SpaceOPS is a product by Onyx Building Solutions. We’re building the operating system for facility management — by facilities professionals, for facilities professionals.',
+    'SpaceOPS is a product by Onyx Building Solutions. We’re building the Work Planning Tool for facility management — by facilities professionals, for facilities professionals.',
   path: '/about',
 });
 

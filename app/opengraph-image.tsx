@@ -45,7 +45,7 @@ export default async function OpenGraphImage() {
             flexDirection: 'column',
           }}
         >
-          <span>The operating system</span>
+          <span>The Work Planning Tool</span>
           <span>for facility management.</span>
         </div>
 
