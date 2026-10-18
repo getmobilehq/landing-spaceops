@@ -90,7 +90,7 @@ export default function IntegrationsPage() {
         primaryHref="/contact"
         primaryExternal={false}
         secondaryLabel="Start free →"
-        secondaryHref="https://app.onyxspaceops.com/signup"
+        secondaryHref="https://app.onyxspaceops.com/register"
       />
     </>
   );

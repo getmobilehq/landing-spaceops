@@ -84,7 +84,7 @@ function TierCard({ tier, billing }: { tier: PricingTier; billing: 'monthly' | '
           <>
             <div className="flex items-baseline gap-1">
               <span className="text-[40px] font-medium tracking-[-0.025em] leading-none">
-                ${price}
+                ${price.toLocaleString('en-US')}
               </span>
               <span className="text-ink-3 text-[16px]">{price > 0 ? period : ''}</span>
             </div>

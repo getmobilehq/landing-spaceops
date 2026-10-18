@@ -11,7 +11,7 @@ export function CtaFinal({
   primaryExternal = true,
   secondaryLabel = 'Book a demo',
   secondaryHref = siteConfig.demoUrl,
-  subline = '1 building · 5 seats · unlimited activities · no time limit',
+  subline = '1 building · 5 seats · 5 rooms · no time limit',
 }: {
   headline: string;
   accent?: string;

@@ -1,12 +1,7 @@
 /**
  * Pricing tiers — single source of truth.
- *
- * ─────────────────────────────────────────────────────────────
- *  TODO (Joseph): REPLACE PLACEHOLDER PRICES
- *  The Pro numbers below are market-rate placeholders ($49/mo,
- *  $490/yr reflecting the 17% annual discount). Swap them for
- *  your real pricing before launch.
- * ─────────────────────────────────────────────────────────────
+ * Yearly = 10 × monthly, the "save 17%" shown on the billing toggle.
+ * Stripe holds the prices actually charged; keep the two in step.
  */
 
 export type PricingTier = {
@@ -30,15 +25,14 @@ export const pricingTiers: PricingTier[] = [
     priceMonthly: 0,
     priceYearly: 0,
     ctaLabel: 'Start free',
-    ctaHref: 'https://app.onyxspaceops.com/signup',
+    ctaHref: 'https://app.onyxspaceops.com/register',
     features: [
       '1 building',
-      '5 team members',
-      'Unlimited activities & inspections',
-      'Custom checklists',
-      'GPS-verified attendance',
+      '5 team members (1 admin, 1 supervisor, 3 janitors)',
+      'Unlimited inspections (up to 5 rooms)',
       'Issue tracking',
-      'Quality reports (PDF & CSV)',
+      'GPS-verified attendance',
+      'Quality reports (PDF & CSV) for the current month',
       'Client portal',
       '3 languages (EN, ES, FR)',
     ],
@@ -47,10 +41,10 @@ export const pricingTiers: PricingTier[] = [
     id: 'pro',
     name: 'Pro',
     tagline: 'For growing cleaning operations',
-    priceMonthly: 49,
-    priceYearly: 490,
+    priceMonthly: 149,
+    priceYearly: 1490,
     ctaLabel: 'Start Pro trial',
-    ctaHref: 'https://app.onyxspaceops.com/signup?plan=pro',
+    ctaHref: 'https://app.onyxspaceops.com/register?plan=pro',
     highlighted: true,
     includesHeader: 'Everything in Free, plus:',
     features: [
@@ -58,7 +52,7 @@ export const pricingTiers: PricingTier[] = [
       'Unlimited team members',
       'AI floor plan vectorisation',
       'AI-powered executive summaries',
-      'Advanced analytics & trends',
+      'Advanced analytics & trends across months',
       'Priority email support',
     ],
   },
