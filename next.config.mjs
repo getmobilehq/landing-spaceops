@@ -36,6 +36,19 @@ const nextConfig = {
       },
     ];
   },
+  // QR labels printed on site encode https://onyxspaceops.com/scan/... from
+  // before the product moved to app.onyxspaceops.com. Those stickers can't be
+  // changed, so forward every scan to the app. Temporary (307), not
+  // permanent, so browsers don't cache it if the target ever moves again.
+  async redirects() {
+    return [
+      {
+        source: '/scan/:path*',
+        destination: 'https://app.onyxspaceops.com/scan/:path*',
+        permanent: false,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
