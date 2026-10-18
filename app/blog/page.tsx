@@ -50,7 +50,7 @@ export default function BlogPage() {
                     <span>·</span>
                     <span>{post.readingTime}</span>
                   </div>
-                  <h2 className="text-[24px] md:text-[28px] font-medium tracking-[-0.02em] mb-3 group-hover:text-indigo-3 transition-colors">
+                  <h2 className="text-[24px] md:text-[28px] tracking-[-0.02em] mb-3 group-hover:text-indigo-3 transition-colors">
                     {post.title}
                   </h2>
                   <p className="text-ink-3 text-[15.5px] leading-[1.6] max-w-[680px]">
@@ -79,7 +79,7 @@ export default function BlogPage() {
                   <div className="font-mono text-[11px] uppercase tracking-[0.06em] text-ink-4 mb-3">
                     {post.tag}
                   </div>
-                  <h3 className="text-[18px] font-medium mb-2 tracking-[-0.015em] text-ink-2">
+                  <h3 className="text-[18px] mb-2 tracking-[-0.015em] text-ink-2">
                     {post.title}
                   </h3>
                   <p className="text-ink-4 text-[14px] leading-[1.55]">{post.excerpt}</p>

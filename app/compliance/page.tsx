@@ -74,7 +74,7 @@ export default function CompliancePage() {
                     <div className="flex flex-col gap-7 mt-8">
                       {s.subsections.map((sub) => (
                         <div key={sub.title}>
-                          <h3 className="text-[17px] font-medium mb-2 tracking-[-0.01em]">
+                          <h3 className="text-[17px] mb-2 tracking-[-0.01em]">
                             {sub.title}
                           </h3>
                           <p className="text-ink-3 text-[15.5px] leading-[1.65]">{sub.body}</p>

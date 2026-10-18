@@ -81,16 +81,80 @@
     line-height: 1.5;
   }
 
+  /* v3 eyebrow: Geist Mono 11px, +0.12em, with a square indigo marker that
+     echoes the inspected room in the mark. */
   .eyebrow {
-    @apply inline-flex items-center gap-[10px] font-mono font-medium text-ink-3;
-    font-size: 12px;
-    letter-spacing: 0.08em;
+    @apply inline-flex items-center gap-[10px] font-mono font-medium text-ink-4;
+    font-size: 11px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
   }
   .eyebrow::before {
     content: '';
-    width: 20px;
-    height: 1px;
+    width: 8px;
+    height: 8px;
+    flex-shrink: 0;
+    background: theme('colors.indigo.3');
+  }
+
+  /* Night surfaces (header, hero, footer): text and accent flip for contrast;
+     the single accent becomes indigo-light. */
+  .night {
+    @apply bg-night text-night-fg;
+  }
+  .night h1,
+  .night h2,
+  .night h3,
+  .night h4 {
+    @apply text-night-fg;
+  }
+  .night .lead {
+    @apply text-night-muted;
+  }
+  .night .serif {
+    @apply text-indigo-light;
+  }
+  .night .eyebrow {
+    @apply text-night-muted;
+  }
+  .night .eyebrow::before {
+    background: theme('colors.indigo.light');
+  }
+
+  /* Indigo band (final CTA): the one accent surface on a page. */
+  .indigo-band {
+    @apply bg-indigo-3 text-white;
+  }
+  .indigo-band h2 {
+    @apply text-white;
+  }
+  .indigo-band .serif {
+    @apply text-white;
+  }
+  .indigo-band .eyebrow {
+    color: #c7d2fe;
+  }
+  .indigo-band .eyebrow::before {
+    background: #c7d2fe;
+  }
+
+  /* Blueprint grid behind the night hero: hairlines only, no glow. */
+  .blueprint {
+    background-color: #0d0d10;
+    background-image: linear-gradient(rgba(165, 180, 252, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(165, 180, 252, 0.07) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  /* Square status badge (v3): mono, uppercase, 4px radius, square dot. */
+  .badge {
+    @apply inline-flex items-center gap-1.5 h-[22px] px-2 rounded-sm font-mono font-medium uppercase whitespace-nowrap w-fit;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    line-height: 1;
+  }
+  .badge-dot {
+    @apply w-1.5 h-1.5 flex-shrink-0;
     background: currentColor;
   }
 
@@ -104,12 +168,6 @@
     padding-bottom: clamp(56px, 6vw, 88px);
   }
 
-  /* Glass nav backdrop */
-  .nav-glass {
-    background: rgba(250, 250, 247, 0.85);
-    backdrop-filter: saturate(180%) blur(12px);
-    -webkit-backdrop-filter: saturate(180%) blur(12px);
-  }
 }
 
 /* ───────── Reveal-on-scroll utility ───────── */

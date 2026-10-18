@@ -70,7 +70,7 @@ export default function IntegrationsPage() {
                 className="border border-line rounded-lg p-7 bg-bg-card"
               >
                 <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-[20px] font-medium tracking-[-0.015em]">{item.name}</h3>
+                  <h3 className="text-[20px] tracking-[-0.015em]">{item.name}</h3>
                   <span className="font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-4 border border-line px-2 py-1 rounded-sm">
                     {item.tag}
                   </span>

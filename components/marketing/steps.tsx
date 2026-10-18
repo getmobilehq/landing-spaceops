@@ -47,10 +47,10 @@ export function Steps() {
 
             {steps.map((step, i) => (
               <div key={step.title} className="relative z-10 group">
-                <div className="w-8 h-8 rounded-full bg-bg border border-line-strong flex items-center justify-center font-mono text-[12px] font-medium text-ink mb-6 transition-all duration-200 group-hover:bg-ink group-hover:text-bg group-hover:border-ink">
+                <div className="w-8 h-8 rounded-sm bg-bg border border-line-strong flex items-center justify-center font-mono text-[12px] font-medium text-ink mb-6 transition-colors duration-200 group-hover:bg-ink group-hover:text-bg group-hover:border-ink">
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                <h3 className="text-[17px] font-medium mb-2.5 tracking-[-0.01em]">{step.title}</h3>
+                <h3 className="text-[20px] leading-[1.25] mb-2.5 tracking-[-0.015em]">{step.title}</h3>
                 <p className="text-ink-3 text-[14.5px] leading-[1.55]">{step.body}</p>
               </div>
             ))}

@@ -54,7 +54,7 @@ export function ContactForm() {
         <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-success mb-4">
           ✓ Message sent
         </div>
-        <h3 className="text-[22px] font-medium mb-3 tracking-[-0.015em]">
+        <h3 className="text-[22px] mb-3 tracking-[-0.015em]">
           Thanks — we&rsquo;ll be in touch.
         </h3>
         <p className="text-ink-3 text-[15px] leading-[1.6]">

@@ -114,7 +114,7 @@ export function RoleTabs() {
                   aria-selected={active === r.id}
                   onClick={() => setActive(r.id)}
                   className={cn(
-                    'py-3.5 px-[18px] text-left text-[15px] font-medium whitespace-nowrap transition-all duration-150 ease-ease',
+                    'py-3.5 px-[18px] text-left text-[15px] font-bold whitespace-nowrap transition-all duration-150 ease-ease',
                     'md:border-l-2 border-b-2 md:border-b-0 border-transparent',
                     active === r.id
                       ? 'text-ink md:border-l-ink border-b-ink md:bg-bg-tint md:rounded-r'
@@ -137,7 +137,7 @@ export function RoleTabs() {
               <div className="font-mono text-[11px] text-indigo-3 tracking-[0.08em] uppercase mb-4">
                 {current.eyebrow}
               </div>
-              <h3 className="font-serif italic text-[28px] font-normal mb-4 tracking-[-0.02em] text-ink">
+              <h3 className="text-[28px] leading-[1.15] mb-4 tracking-[-0.02em] text-ink">
                 {current.title}
               </h3>
               <p className="text-ink-3 text-[16px] leading-[1.6] max-w-[560px] mb-8">
@@ -146,7 +146,7 @@ export function RoleTabs() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
                 {current.features.map((f) => (
                   <div key={f} className="flex items-start gap-2.5 text-[14px] text-ink-2">
-                    <span className="w-1 h-1 rounded-full bg-indigo-3 mt-[9px] flex-shrink-0" />
+                    <span className="w-1.5 h-1.5 bg-ink mt-[8px] flex-shrink-0" />
                     <span>{f}</span>
                   </div>
                 ))}

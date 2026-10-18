@@ -8,7 +8,7 @@ export default function NotFound() {
     <section className="pt-[clamp(96px,10vw,148px)] pb-[clamp(96px,10vw,148px)] min-h-[70vh] flex items-center">
       <Container>
         <div className="max-w-[620px]">
-          <div className="font-serif italic text-[96px] text-indigo-3 leading-none mb-6 tracking-[-0.02em]">
+          <div className="font-display font-bold text-[96px] text-ink leading-none mb-6 tracking-[-0.035em]">
             404
           </div>
           <Eyebrow className="mb-5">Not found</Eyebrow>

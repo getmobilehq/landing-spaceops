@@ -80,7 +80,7 @@ export default function AboutPage() {
                 <div className="font-mono text-[12px] text-indigo-3 tracking-[0.06em] mb-4 font-medium">
                   {String(i + 1).padStart(2, '0')}
                 </div>
-                <h3 className="text-[22px] font-medium mb-3 tracking-[-0.02em]">{v.title}</h3>
+                <h3 className="text-[22px] mb-3 tracking-[-0.02em]">{v.title}</h3>
                 <p className="text-ink-3 text-[15.5px] leading-[1.65]">{v.body}</p>
               </div>
             ))}
@@ -94,7 +94,7 @@ export default function AboutPage() {
             <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-4 mb-4">
               Parent company
             </div>
-            <h3 className="text-[24px] font-medium mb-4 tracking-[-0.02em]">
+            <h3 className="text-[24px] mb-4 tracking-[-0.02em]">
               Onyx Building Solutions
             </h3>
             <p className="text-ink-3 text-[16px] leading-[1.6] italic">

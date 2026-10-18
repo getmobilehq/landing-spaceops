@@ -70,7 +70,7 @@ export default function SecurityPage() {
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <div>
-                  <h3 className="text-[19px] font-medium mb-3 tracking-[-0.015em]">{p.title}</h3>
+                  <h3 className="text-[19px] mb-3 tracking-[-0.015em]">{p.title}</h3>
                   <p className="text-ink-3 text-[15px] leading-[1.6]">{p.body}</p>
                 </div>
               </div>

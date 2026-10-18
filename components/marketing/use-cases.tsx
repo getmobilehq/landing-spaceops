@@ -47,11 +47,11 @@ export function UseCases() {
                 key={c.title}
                 className="border border-line rounded-lg p-8 bg-bg-card flex gap-6 items-start transition-colors duration-200 hover:border-ink"
               >
-                <div className="font-serif italic text-[32px] text-ink-4 leading-none flex-shrink-0 pt-1">
+                <div className="font-mono text-[12px] text-ink-4 leading-none flex-shrink-0 pt-1.5">
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <div>
-                  <h3 className="text-[17px] font-medium mb-2 tracking-[-0.01em]">{c.title}</h3>
+                  <h3 className="text-[20px] leading-[1.25] mb-2 tracking-[-0.015em]">{c.title}</h3>
                   <p className="text-ink-3 text-[14.5px] leading-[1.55]">{c.body}</p>
                 </div>
               </article>

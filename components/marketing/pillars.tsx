@@ -60,11 +60,11 @@ export function Pillars() {
                   i < 2 ? 'sm:border-b border-line lg:border-b-0' : ''
                 }`}
               >
-                <div className="font-mono text-[12px] text-indigo-3 tracking-[0.06em] mb-7 font-medium">
+                <div className="font-mono text-[12px] text-ink-4 tracking-[0.1em] mb-7 font-medium">
                   {p.num}
                 </div>
-                <h3 className="text-[20px] font-medium mb-3.5 tracking-[-0.015em]">{p.title}</h3>
-                <p className="text-ink-3 text-[14.5px] leading-[1.55]">{p.body}</p>
+                <h3 className="text-[22px] leading-[1.2] mb-3.5 tracking-[-0.015em]">{p.title}</h3>
+                <p className="text-ink-3 text-[15px] leading-[1.6]">{p.body}</p>
               </article>
             ))}
           </div>

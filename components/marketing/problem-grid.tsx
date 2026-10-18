@@ -32,15 +32,14 @@ export function ProblemGrid() {
           />
         </Reveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
           {problems.map((p, i) => (
             <Reveal key={p.title}>
-              <article className="border border-line rounded-lg p-8 bg-bg-card transition-all duration-300 ease-ease hover:border-line-strong hover:-translate-y-0.5">
-                <div className="font-serif italic text-[44px] text-indigo-3 leading-none mb-7 tracking-[-0.02em]">
-                  {String(i + 1).padStart(2, '0')}
-                </div>
-                <h3 className="text-[19px] font-medium mb-3 tracking-[-0.015em]">{p.title}</h3>
-                <p className="text-ink-3 text-[15px] leading-[1.55]">{p.body}</p>
+              {/* v3 feature card: 2px ink rule, mono number, Arvo title, no box. */}
+              <article className="grid gap-3.5 content-start pt-6 border-t-2 border-ink">
+                <div className="font-mono text-[12px] text-ink-4">{String(i + 1).padStart(2, '0')}</div>
+                <h3 className="text-[22px] leading-[1.2] tracking-[-0.015em]">{p.title}</h3>
+                <p className="text-ink-3 text-[15px] leading-[1.6]">{p.body}</p>
               </article>
             </Reveal>
           ))}

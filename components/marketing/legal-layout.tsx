@@ -63,7 +63,7 @@ export function LegalSection({
 }) {
   return (
     <div>
-      <h2 className="text-[22px] md:text-[24px] font-medium mb-4 tracking-[-0.02em]">{title}</h2>
+      <h2 className="text-[22px] md:text-[24px] mb-4 tracking-[-0.02em]">{title}</h2>
       <div className="text-ink-2 text-[15.5px] leading-[1.7] flex flex-col gap-3">{children}</div>
     </div>
   );

@@ -113,7 +113,7 @@ export default function FeatureDetailPage({ params }: { params: { slug: string }
                 href={`/features/${f.slug}`}
                 className="group border border-line rounded-lg p-7 bg-bg-card hover:border-ink transition-colors duration-200"
               >
-                <h3 className="text-[17px] font-medium mb-2 tracking-[-0.01em] group-hover:text-indigo-3 transition-colors">
+                <h3 className="text-[17px] mb-2 tracking-[-0.01em] group-hover:text-indigo-3 transition-colors">
                   {f.name}
                 </h3>
                 <p className="text-ink-3 text-[14.5px] leading-[1.55]">{f.oneLiner}</p>
