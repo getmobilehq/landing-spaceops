@@ -25,8 +25,8 @@ export default function PricingPage() {
               Simple pricing. <span className="serif">No</span> surprises.
             </h1>
             <p className="lead">
-              Start free, upgrade when your operation grows. All plans include unlimited
-              activities, inspections, and reports.
+              Start free, upgrade when your operation grows. Every plan includes inspections,
+              issue tracking, GPS-verified attendance and the client portal.
             </p>
           </div>
         </Container>

@@ -103,7 +103,7 @@ export const pricingFAQs = [
   },
   {
     q: 'What happens when I hit the free plan limits?',
-    a: 'You\u2019ll see a prompt to upgrade. Nothing breaks — you just can\u2019t add more buildings or users until you upgrade or remove existing ones.',
+    a: 'You\u2019ll see a prompt to upgrade. Nothing breaks — you just can\u2019t add more buildings, rooms or team members until you upgrade or remove existing ones. Reports on Free cover the current month.',
   },
   {
     q: 'Do janitors need their own account?',

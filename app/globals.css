@@ -19,15 +19,19 @@
 
   body {
     @apply bg-bg text-ink font-sans antialiased;
-    font-size: 16.5px;
-    line-height: 1.55;
-    font-feature-settings: 'ss01', 'cv11';
+    font-size: 16px;
+    line-height: 1.6;
   }
 
-  /* Headings use sans by default with tight tracking — serif is opt-in via .serif */
-  h1, h2, h3, h4 {
-    @apply font-medium text-ink;
-    letter-spacing: -0.02em;
+  /* v3: Arvo Bold headlines with tight tracking; one Arvo Italic indigo
+     emphasis word via .serif. H4 is Mulish 800. */
+  h1, h2, h3 {
+    @apply font-display font-bold text-ink;
+    letter-spacing: -0.025em;
+    text-wrap: balance;
+  }
+  h4 {
+    @apply font-sans font-extrabold text-ink;
   }
   h1 {
     font-size: var(--t-hero);
@@ -67,7 +71,7 @@
 /* ───────── Reusable components ───────── */
 @layer components {
   .serif {
-    @apply font-serif italic font-normal;
+    @apply font-serif italic font-normal text-indigo-3;
     letter-spacing: -0.01em;
   }
 
