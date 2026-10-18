@@ -23,57 +23,48 @@ export function CtaFinal({
   secondaryHref?: string;
   subline?: string;
 }) {
+  // v3 CTA band: the page's one indigo surface, title left, actions right.
   return (
-    <section className="bg-ink text-bg">
+    <section className="indigo-band">
       <Container>
-        <div className="py-[clamp(72px,9vw,128px)] flex flex-col items-start">
-          <div className="eyebrow mb-5" style={{ color: 'rgba(250, 250, 247, 0.6)' }}>
-            Start today
-          </div>
-          <h2 className="text-bg max-w-[720px]">
-            {headline}
-            {accent && (
-              <>
-                {' '}
-                <span className="serif">{accent}</span>
-              </>
+        <div className="py-[clamp(64px,9vw,112px)] grid grid-cols-1 lg:grid-cols-[minmax(0,1.5fr)_auto] gap-x-16 gap-y-8 items-end">
+          <div>
+            <div className="eyebrow mb-5">Start today</div>
+            <h2 className="max-w-[720px]">
+              {headline}
+              {accent && (
+                <>
+                  {' '}
+                  <span className="serif">{accent}</span>
+                </>
+              )}
+            </h2>
+            {lead && <p className="lead mt-5 !text-[#E0E7FF] max-w-[48ch]">{lead}</p>}
+            {subline && (
+              <div className="mt-6 font-mono text-[11.5px] tracking-[0.1em] uppercase text-[#C7D2FE]">
+                {subline}
+              </div>
             )}
-          </h2>
-          {lead && (
-            <p
-              className="lead mt-7 mb-10"
-              style={{ color: 'rgba(250, 250, 247, 0.7)', maxWidth: '580px' }}
-            >
-              {lead}
-            </p>
-          )}
-          <div className="flex flex-wrap gap-4 mt-10">
+          </div>
+          <div className="flex flex-wrap gap-3">
             <Button
               href={primaryHref}
               external={primaryExternal}
-              variant="primary"
+              variant="inverse"
               size="lg"
-              className="!bg-bg !text-ink hover:!bg-indigo-soft hover:!text-indigo"
+              className="flex-1 sm:flex-none"
             >
               {primaryLabel}
             </Button>
             <Button
               href={secondaryHref}
-              variant="outline"
+              variant="outline-inverse"
               size="lg"
-              className="!border-[rgba(250,250,247,0.25)] !text-bg hover:!border-bg"
+              className="flex-1 sm:flex-none"
             >
               {secondaryLabel}
             </Button>
           </div>
-          {subline && (
-            <div
-              className="mt-8 font-mono text-[12px] tracking-[0.04em] uppercase"
-              style={{ color: 'rgba(250, 250, 247, 0.5)' }}
-            >
-              {subline}
-            </div>
-          )}
         </div>
       </Container>
     </section>

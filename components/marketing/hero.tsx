@@ -33,7 +33,7 @@ const rows: Row[] = [
     building: 'Midtown Tower',
     assigned: 'M. Reyes +3',
     status: 'ok',
-    statusLabel: '● Passed',
+    statusLabel: 'Passed',
     score: '96%',
   },
   {
@@ -41,7 +41,7 @@ const rows: Row[] = [
     building: 'Harbor Plaza',
     assigned: 'D. Chen',
     status: 'warn',
-    statusLabel: '● In progress',
+    statusLabel: 'In progress',
     score: '—',
   },
   {
@@ -49,7 +49,7 @@ const rows: Row[] = [
     building: 'Midtown Tower',
     assigned: 'J. Okoye',
     status: 'ok',
-    statusLabel: '● Passed',
+    statusLabel: 'Passed',
     score: '91%',
   },
   {
@@ -57,20 +57,21 @@ const rows: Row[] = [
     building: 'Cedar Campus',
     assigned: 'A. Park +2',
     status: 'line',
-    statusLabel: '○ Scheduled',
+    statusLabel: 'Scheduled',
     score: '—',
   },
 ];
 
+// v3 square badges: status colour only in the badge and its square dot.
 const statusStyles: Record<Row['status'], string> = {
-  ok: 'bg-[#DCFCE7] text-[#166534]',
-  warn: 'bg-[#FEF3C7] text-[#854D0E]',
-  line: 'bg-transparent text-ink-3 border border-line-strong',
+  ok: 'bg-[#DCFCE7] text-success',
+  warn: 'bg-[#FEF3C7] text-warn',
+  line: 'bg-transparent text-ink-3 shadow-[inset_0_0_0_1px_#C9C9CF]',
 };
 
 export function Hero() {
   return (
-    <header className="pt-[clamp(80px,11vw,148px)] pb-[clamp(80px,10vw,128px)] overflow-hidden">
+    <header className="night blueprint pt-[clamp(80px,11vw,148px)] pb-[clamp(80px,10vw,128px)] overflow-hidden">
       <Container>
         <div className="max-w-[920px]">
           <Eyebrow className="mb-5 animate-fade-up">Facility operations, rebuilt</Eyebrow>
@@ -91,41 +92,38 @@ export function Hero() {
             className="flex flex-wrap gap-4 mb-8 animate-fade-up"
             style={{ animationDelay: '0.2s' }}
           >
-            <Button href={siteConfig.signupUrl} external variant="primary" size="lg">
+            <Button href={siteConfig.signupUrl} external variant="inverse" size="lg">
               Start free →
             </Button>
-            <Button href={siteConfig.demoUrl} variant="ghost" size="lg">
-              Book a demo <span className="inline-block">→</span>
+            <Button href={siteConfig.demoUrl} variant="outline-inverse" size="lg">
+              Book a demo →
             </Button>
           </div>
           <div
-            className="inline-flex items-center gap-3 text-small text-ink-4 animate-fade-up"
+            className="inline-flex items-center gap-3 text-small text-night-muted animate-fade-up"
             style={{ animationDelay: '0.28s' }}
           >
-            <span
-              className="w-[6px] h-[6px] rounded-full bg-success"
-              style={{ boxShadow: '0 0 0 3px rgba(22, 101, 52, 0.12)' }}
-            />
+            <span className="w-2 h-2 flex-shrink-0 bg-indigo-light" aria-hidden="true" />
             Trusted by facility managers running operations across multiple buildings and hundreds of rooms.
           </div>
         </div>
 
         {/* Dashboard visual */}
         <div
-          className="mt-[clamp(56px,7vw,88px)] border border-line rounded-lg bg-bg-card p-6 animate-fade-up"
+          className="mt-[clamp(56px,7vw,88px)] border border-night-line rounded-lg bg-bg-card text-ink p-6 animate-fade-up"
           style={{ animationDelay: '0.36s' }}
           aria-hidden="true"
         >
           <div className="flex items-center justify-between pb-5 border-b border-line mb-6">
             <div className="flex items-center gap-[10px] font-mono text-[12px] text-ink-3 tracking-[0.04em]">
-              <span className="w-[6px] h-[6px] rounded-full bg-success" />
+              <span className="w-1.5 h-1.5 bg-success" />
               <span>OPS / Midtown Tower — Live</span>
             </div>
             <div className="flex gap-1">
               {['Today', '7 days', '30 days'].map((tab, i) => (
                 <div
                   key={tab}
-                  className={`px-[10px] py-1 rounded-sm font-mono text-[11px] ${
+                  className={`px-[10px] py-1 rounded font-mono text-[11px] ${
                     i === 0 ? 'bg-ink text-bg' : 'text-ink-4'
                   }`}
                 >
@@ -138,13 +136,15 @@ export function Hero() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-line rounded overflow-hidden mb-6">
             {kpis.map((kpi) => (
               <div key={kpi.label} className="bg-bg-card p-5">
-                <div className="font-mono text-[11px] uppercase tracking-[0.04em] text-ink-4 mb-2">
+                <div className="font-mono text-[11px] uppercase tracking-[0.1em] text-ink-4 mb-3">
                   {kpi.label}
                 </div>
-                <div className="text-[28px] font-medium tracking-[-0.02em] leading-none">
+                <div className="font-display font-bold text-[32px] tracking-[-0.03em] leading-none tabular-nums">
                   {kpi.value}
                   {kpi.unit && (
-                    <span className="text-[16px] text-ink-3 font-normal ml-0.5">{kpi.unit}</span>
+                    <span className="font-mono text-[14px] text-ink-4 font-medium tracking-normal ml-1">
+                      {kpi.unit}
+                    </span>
                   )}
                 </div>
                 <div
@@ -159,7 +159,7 @@ export function Hero() {
           </div>
 
           <div>
-            <div className="hidden md:grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-4 px-3 py-[10px] font-mono text-[11px] uppercase tracking-[0.04em] text-ink-4 border-b border-line">
+            <div className="hidden md:grid grid-cols-[2fr_1fr_1fr_1fr_1fr] gap-4 px-3 py-[10px] font-mono text-[11px] uppercase tracking-[0.1em] text-ink-4 bg-bg-tint border-b border-line">
               <div>Activity</div>
               <div>Building</div>
               <div>Assigned</div>
@@ -175,9 +175,8 @@ export function Hero() {
                 <div>{row.building}</div>
                 <div className="hidden md:block">{row.assigned}</div>
                 <div>
-                  <span
-                    className={`inline-flex items-center gap-1.5 text-[11.5px] font-medium px-2 py-[3px] rounded-full w-fit ${statusStyles[row.status]}`}
-                  >
+                  <span className={`badge ${statusStyles[row.status]}`}>
+                    <span className="badge-dot" aria-hidden="true" />
                     {row.statusLabel}
                   </span>
                 </div>

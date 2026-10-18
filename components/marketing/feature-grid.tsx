@@ -18,8 +18,9 @@ const Icon = ({ name }: { name: IconName }) => {
     fill: 'none',
     stroke: 'currentColor',
     strokeWidth: 1.5,
-    strokeLinecap: 'round' as const,
-    strokeLinejoin: 'round' as const,
+    // Plan-style geometry until the Plan icon set lands: square caps, mitred joins.
+    strokeLinecap: 'square' as const,
+    strokeLinejoin: 'miter' as const,
   };
   switch (name) {
     case 'building':
@@ -161,10 +162,10 @@ export function FeatureGrid({ anchorId }: { anchorId?: string }) {
                 key={f.title}
                 className="p-8 border-r border-b border-line bg-bg-card hover:bg-bg-tint transition-colors duration-200"
               >
-                <div className="w-7 h-7 mb-6 text-indigo-3">
+                <div className="w-7 h-7 mb-6 text-ink">
                   <Icon name={f.icon} />
                 </div>
-                <h3 className="text-[16px] font-medium mb-2 tracking-[-0.01em]">{f.title}</h3>
+                <h3 className="text-[18px] leading-[1.25] mb-2 tracking-[-0.015em]">{f.title}</h3>
                 <p className="text-ink-3 text-[14px] leading-[1.55]">{f.body}</p>
               </article>
             ))}

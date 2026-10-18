@@ -43,7 +43,7 @@ export default function FeaturesPage() {
                   {String(i + 1).padStart(2, '0')}
                 </div>
                 <div>
-                  <h2 className="text-[24px] md:text-[28px] font-medium tracking-[-0.02em] mb-2 group-hover:text-indigo-3 transition-colors">
+                  <h2 className="text-[24px] md:text-[28px] tracking-[-0.02em] mb-2 group-hover:text-indigo-3 transition-colors">
                     {f.name}
                   </h2>
                   <p className="text-ink-3 text-[15.5px] leading-[1.55] max-w-[620px]">

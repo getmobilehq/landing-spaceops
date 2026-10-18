@@ -13,12 +13,12 @@ export function PricingTable() {
     <Container>
       {/* Toggle */}
       <div className="flex justify-center mb-14">
-        <div className="inline-flex items-center gap-0 p-1 bg-bg-tint border border-line rounded">
+        <div className="inline-flex items-center gap-0 p-1 bg-bg-tint border border-line rounded-lg">
           <button
             onClick={() => setBilling('monthly')}
             className={cn(
-              'px-5 py-2 text-small font-medium rounded-sm transition-all',
-              billing === 'monthly' ? 'bg-bg-card text-ink shadow-sm' : 'text-ink-3',
+              'px-5 h-10 text-small font-bold rounded transition-colors',
+              billing === 'monthly' ? 'bg-bg-card text-ink ring-1 ring-line' : 'text-ink-3 hover:text-ink',
             )}
           >
             Monthly
@@ -26,14 +26,12 @@ export function PricingTable() {
           <button
             onClick={() => setBilling('yearly')}
             className={cn(
-              'px-5 py-2 text-small font-medium rounded-sm transition-all inline-flex items-center gap-2',
-              billing === 'yearly' ? 'bg-bg-card text-ink shadow-sm' : 'text-ink-3',
+              'px-5 h-10 text-small font-bold rounded transition-colors inline-flex items-center gap-2',
+              billing === 'yearly' ? 'bg-bg-card text-ink ring-1 ring-line' : 'text-ink-3 hover:text-ink',
             )}
           >
             Yearly
-            <span className="font-mono text-[10px] px-1.5 py-0.5 bg-indigo-soft text-indigo-3 rounded-sm tracking-[0.04em]">
-              SAVE 17%
-            </span>
+            <span className="badge bg-indigo-soft text-indigo-3">SAVE 17%</span>
           </button>
         </div>
       </div>
@@ -57,38 +55,36 @@ function TierCard({ tier, billing }: { tier: PricingTier; billing: 'monthly' | '
       className={cn(
         'border rounded-lg p-8 flex flex-col',
         tier.highlighted
-          ? 'border-ink bg-bg-card relative'
+          ? 'border-2 border-ink bg-bg-card relative'
           : 'border-line bg-bg-card',
       )}
     >
       {tier.highlighted && (
-        <div className="absolute -top-3 left-8 font-mono text-[10px] uppercase tracking-[0.08em] bg-ink text-bg px-2.5 py-1 rounded-sm">
-          Most popular
-        </div>
+        <div className="badge absolute -top-[11px] left-8 bg-ink text-bg">Most popular</div>
       )}
 
       <div className="mb-6">
-        <h3 className="text-[22px] font-medium tracking-[-0.015em]">{tier.name}</h3>
+        <h3 className="text-[24px] tracking-[-0.02em]">{tier.name}</h3>
         <p className="text-ink-4 text-[14px] mt-1">{tier.tagline}</p>
       </div>
 
       <div className="mb-8 min-h-[80px]">
         {price === null ? (
           <>
-            <div className="text-[40px] font-medium tracking-[-0.025em] leading-none">Custom</div>
-            <div className="text-ink-4 text-[13px] mt-2 font-mono uppercase tracking-[0.04em]">
+            <div className="font-display font-bold text-[44px] tracking-[-0.03em] leading-none">Custom</div>
+            <div className="text-ink-4 text-[11px] mt-3 font-mono uppercase tracking-[0.1em]">
               Contact sales
             </div>
           </>
         ) : (
           <>
             <div className="flex items-baseline gap-1">
-              <span className="text-[40px] font-medium tracking-[-0.025em] leading-none">
+              <span className="font-display font-bold text-[44px] tracking-[-0.03em] leading-none tabular-nums">
                 ${price.toLocaleString('en-US')}
               </span>
-              <span className="text-ink-3 text-[16px]">{price > 0 ? period : ''}</span>
+              <span className="font-mono text-ink-4 text-[14px]">{price > 0 ? period : ''}</span>
             </div>
-            <div className="text-ink-4 text-[13px] mt-2 font-mono uppercase tracking-[0.04em]">
+            <div className="text-ink-4 text-[11px] mt-3 font-mono uppercase tracking-[0.1em]">
               {price === 0
                 ? 'Free forever'
                 : billing === 'yearly'
@@ -110,7 +106,7 @@ function TierCard({ tier, billing }: { tier: PricingTier; billing: 'monthly' | '
       </Button>
 
       {tier.includesHeader && (
-        <div className="font-mono text-[11px] uppercase tracking-[0.06em] text-ink-4 mb-4">
+        <div className="font-mono text-[11px] uppercase tracking-[0.12em] text-ink-4 mb-4">
           {tier.includesHeader}
         </div>
       )}
@@ -119,13 +115,13 @@ function TierCard({ tier, billing }: { tier: PricingTier; billing: 'monthly' | '
         {tier.features.map((f) => (
           <li key={f} className="flex items-start gap-3">
             <svg
-              className="w-4 h-4 mt-[3px] flex-shrink-0 text-indigo-3"
+              className="w-4 h-4 mt-[3px] flex-shrink-0 text-ink"
               viewBox="0 0 16 16"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+              strokeLinecap="square"
+              strokeLinejoin="miter"
             >
               <path d="M3 8l3.5 3.5L13 5" />
             </svg>
