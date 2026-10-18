@@ -9,8 +9,8 @@ export const siteConfig = {
   },
   description:
     'Manage cleaning teams, track inspections, verify attendance with GPS, and generate client-ready reports. Free to start. No credit card required.',
-  signupUrl: 'https://app.onyxspaceops.com/signup',
-  signinUrl: 'https://app.onyxspaceops.com/signin',
+  signupUrl: 'https://app.onyxspaceops.com/register',
+  signinUrl: 'https://app.onyxspaceops.com/auth/login',
   demoUrl: '/contact',
 };
 

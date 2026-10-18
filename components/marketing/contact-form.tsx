@@ -61,7 +61,7 @@ export function ContactForm() {
           We usually respond within one business day. If you&rsquo;d like to get started sooner,
           you can{' '}
           <a
-            href="https://app.onyxspaceops.com/signup"
+            href="https://app.onyxspaceops.com/register"
             className="text-indigo-3 underline underline-offset-2"
           >
             spin up a free account now
