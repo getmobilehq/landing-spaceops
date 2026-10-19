@@ -11,7 +11,7 @@ const steps = [
   {
     title: 'Add your first building',
     body:
-      'Enter a name and address. Upload a floor plan and let AI detect room boundaries — or set them up manually.',
+      'Enter a name and address. Upload a floor plan and let AI detect room boundaries, or set them up manually.',
   },
   {
     title: 'Invite your team',

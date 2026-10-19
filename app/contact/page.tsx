@@ -20,7 +20,7 @@ export default function ContactPage() {
             </h1>
             <p className="lead mb-10">
               Whether you want a walkthrough, a custom quote, or help evaluating SpaceOPS for a
-              large operation — send us a note and we&rsquo;ll be in touch within one business day.
+              large operation, send us a note. We&rsquo;ll be in touch within one business day.
             </p>
 
             <div className="flex flex-col gap-8">

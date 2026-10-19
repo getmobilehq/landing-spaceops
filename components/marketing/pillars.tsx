@@ -36,7 +36,7 @@ export function Pillars() {
                 One platform. <span className="serif">Complete</span> control.
               </>
             }
-            lead="SpaceOPS connects every role in your operation — from the janitor on the floor to the client in the boardroom — into a single, real-time workflow."
+            lead="SpaceOPS connects every role in your operation, from the janitor on the floor to the client in the boardroom, in a single real-time workflow."
           />
         </Reveal>
 

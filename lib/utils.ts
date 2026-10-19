@@ -12,12 +12,14 @@ export function buildMetadata(input: {
   noindex?: boolean;
 }): Metadata {
   const { title, description, path = '/', noindex = false } = input;
-  const fullTitle = title === siteConfig.name ? title : `${title} — ${siteConfig.name}`;
+  const fullTitle = title === siteConfig.name ? title : `${title} | ${siteConfig.name}`;
   const url = `${siteConfig.url}${path}`;
   const desc = description || siteConfig.description;
 
   return {
-    title: fullTitle,
+    // Absolute: fullTitle already carries the brand, so skip the layout's
+    // "%s | SpaceOPS" template (which otherwise doubled it).
+    title: { absolute: fullTitle },
     description: desc,
     alternates: { canonical: url },
     openGraph: {

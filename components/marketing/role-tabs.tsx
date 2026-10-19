@@ -61,12 +61,12 @@ const roles: RoleData[] = [
     label: 'Client',
     title: 'Proof that the job is being done well.',
     body:
-      'A read-only dashboard scoped to their buildings: SLA compliance, activity pass rates, open issues, recent history. Trust through visibility — never see your internal data, only the work that affects them.',
+      'A read-only dashboard scoped to their buildings: SLA compliance, activity pass rates, open issues, recent history. Trust through visibility: they never see your internal data, only the work that affects them.',
     features: [
       'SLA compliance dashboard',
       'Activity & inspection visibility',
       'Open issue tracking',
-      'Scoped per client — zero leakage',
+      'Scoped per client, with zero leakage',
     ],
   },
 ];

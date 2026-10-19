@@ -13,7 +13,7 @@ export type ComplianceSection = {
 export const complianceSections: ComplianceSection[] = [
   {
     id: 'flsa',
-    navLabel: 'Section A — FLSA',
+    navLabel: 'Section A: FLSA',
     headline: 'FLSA-ready timekeeping and overtime.',
     paragraphs: [
       'The Fair Labor Standards Act requires employers to keep accurate records of hours worked and to pay non-exempt employees overtime (1.5x) for any hours exceeding 40 in a workweek.',
@@ -21,11 +21,11 @@ export const complianceSections: ComplianceSection[] = [
     subsections: [
       {
         title: 'Accurate timekeeping (29 CFR 516)',
-        body: 'The Department of Labor requires employers to maintain records of hours worked each day and total hours worked each workweek for every non-exempt employee. SpaceOPS captures clock-in and clock-out timestamps automatically — no manual timesheets, no rounding disputes, no missing records.',
+        body: 'The Department of Labor requires employers to maintain records of hours worked each day and total hours worked each workweek for every non-exempt employee. SpaceOPS captures clock-in and clock-out timestamps automatically. No manual timesheets, no rounding disputes, no missing records.',
       },
       {
         title: 'Overtime calculation (29 CFR 778)',
-        body: 'SpaceOPS calculates overtime automatically based on the threshold you configure per employee (default: 40 hours/week). The system separates regular hours from overtime hours and applies the correct multiplier (default: 1.5x, configurable up to 5x). This reduces the risk of miscalculating overtime pay — one of the most common FLSA violations.',
+        body: 'SpaceOPS calculates overtime automatically based on the threshold you configure per employee (default: 40 hours/week). The system separates regular hours from overtime hours and applies the correct multiplier (default: 1.5x, configurable up to 5x). This reduces the risk of miscalculating overtime pay, one of the most common FLSA violations.',
       },
       {
         title: 'Recordkeeping retention',
@@ -43,8 +43,8 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'state-overtime',
-    navLabel: 'Section B — State laws',
-    headline: 'State-level overtime rules vary — SpaceOPS adapts.',
+    navLabel: 'Section B: State laws',
+    headline: 'State-level overtime rules vary. SpaceOPS adapts.',
     paragraphs: [
       'Several states have overtime rules that go beyond the federal FLSA standard. SpaceOPS\u2019s per-employee configuration lets you handle these variations.',
     ],
@@ -66,8 +66,8 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'gps-privacy',
-    navLabel: 'Section C — GPS & privacy',
-    headline: 'GPS verification done right — with transparency.',
+    navLabel: 'Section C: GPS & privacy',
+    headline: 'GPS verification done right, with transparency.',
     paragraphs: [
       'SpaceOPS uses GPS location at the moment of clock-in to verify that an employee is within the building\u2019s geofence radius. This is a single location check, not continuous tracking.',
     ],
@@ -103,17 +103,17 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'biometric',
-    navLabel: 'Section D — Biometric privacy',
+    navLabel: 'Section D: Biometric privacy',
     headline: 'SpaceOPS does not collect biometric data.',
     paragraphs: [
-      'Several states — most notably Illinois (BIPA), Texas (CUBI), and Washington — regulate the collection of biometric data such as fingerprints, facial scans, and retina patterns.',
-      'SpaceOPS does not collect, store, or process any biometric data. Attendance verification uses GPS geofencing and QR code scanning — not fingerprints, facial recognition, or any biometric identifier.',
+      'Several states, most notably Illinois (BIPA), Texas (CUBI), and Washington, regulate the collection of biometric data such as fingerprints, facial scans, and retina patterns.',
+      'SpaceOPS does not collect, store, or process any biometric data. Attendance verification uses GPS geofencing and QR code scanning, not fingerprints, facial recognition, or any biometric identifier.',
       'This means SpaceOPS customers are not subject to biometric privacy obligations (such as BIPA\u2019s written consent requirements or data retention/destruction policies) as a result of using the platform.',
     ],
   },
   {
     id: 'osha',
-    navLabel: 'Section E — OSHA',
+    navLabel: 'Section E: OSHA',
     headline: 'Support your OSHA obligations with better documentation.',
     paragraphs: [
       'The Occupational Safety and Health Administration (OSHA) requires employers to maintain safe workplaces and document certain incidents. While SpaceOPS is not an OSHA compliance tool, its issue tracking and inspection features support workplace safety practices.',
@@ -125,7 +125,7 @@ export const complianceSections: ComplianceSection[] = [
       },
       {
         title: 'Resolution tracking',
-        body: 'Issues move through open, in progress, and resolved statuses with timestamps. This documents your response to reported hazards — useful during OSHA inquiries.',
+        body: 'Issues move through open, in progress, and resolved statuses with timestamps. This documents your response to reported hazards, which is useful during OSHA inquiries.',
       },
       {
         title: 'Inspection records',
@@ -136,7 +136,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'janitorial',
-    navLabel: 'Section F — Industry regulations',
+    navLabel: 'Section F: Industry regulations',
     headline: 'Regulations specific to the cleaning industry.',
     paragraphs: [],
     subsections: [
@@ -145,7 +145,7 @@ export const complianceSections: ComplianceSection[] = [
         body: 'California requires janitorial employers to register with the Division of Labor Standards Enforcement (DLSE). Registered employers must maintain records of employees, work locations, and hours worked. SpaceOPS\u2019s attendance records, building assignments, and payroll data directly support these recordkeeping requirements.',
       },
       {
-        title: 'California AB 547 — Janitorial Worker Training',
+        title: 'California AB 547: Janitorial Worker Training',
         body: 'Requires property service employers to provide training on sexual harassment and assault prevention. SpaceOPS does not provide training content but can track task assignments and supervisor oversight that support duty-of-care documentation.',
       },
       {
@@ -160,7 +160,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'retention',
-    navLabel: 'Section G — Data retention',
+    navLabel: 'Section G: Data retention',
     headline: 'Data retention, access, and deletion.',
     paragraphs: [
       'SpaceOPS retains attendance, payroll, and user data for as long as the organisation\u2019s account is active. Organisations can export all data (CSV) at any time. Upon account deletion, all organisation data is permanently removed.',
@@ -183,31 +183,31 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'joint-employer',
-    navLabel: 'Section H — Joint employer',
+    navLabel: 'Section H: Joint employer',
     headline: 'Understand joint employer risks in facility management.',
     paragraphs: [
-      'In the cleaning industry, joint employer liability is a significant concern. When a property management company or building owner exerts control over a cleaning contractor\u2019s workers — schedules, supervision, pay — they may be deemed a joint employer under the FLSA and NLRA.',
+      'In the cleaning industry, joint employer liability is a significant concern. When a property management company or building owner exerts control over a cleaning contractor\u2019s workers (schedules, supervision, pay), they may be deemed a joint employer under the FLSA and NLRA.',
     ],
     keyPoints: [
       'The admin role belongs to the cleaning company, not the building owner',
-      'The client role is read-only — clients cannot create tasks, assign workers, or manage schedules',
+      'The client role is read-only: clients cannot create tasks, assign workers, or manage schedules',
       'Scheduling, supervision, and payroll are controlled entirely by the cleaning company',
       'The client portal provides transparency without operational control',
     ],
-    note: 'Role separation supports the argument that the building owner is a client receiving a service, not a joint employer directing work. However, joint employer determinations are fact-specific — consult legal counsel for your situation.',
+    note: 'Role separation supports the argument that the building owner is a client receiving a service, not a joint employer directing work. However, joint employer determinations are fact-specific, so consult legal counsel for your situation.',
   },
   {
     id: 'insurance',
-    navLabel: 'Section I — Insurance & bonding',
+    navLabel: 'Section I: Insurance & bonding',
     headline: 'Documentation that supports your insurance requirements.',
     paragraphs: [
       'Many commercial cleaning contracts require proof of quality control processes, employee tracking, and incident documentation for insurance and bonding purposes.',
     ],
     keyPoints: [
-      'Attendance records with GPS verification — proof that employees were on-site',
-      'Inspection records with pass/fail results — proof that quality checks were performed',
-      'Issue tracking with timestamps and resolution — proof that problems were addressed',
-      'Payroll records with approval audit trails — proof of proper compensation',
+      'Attendance records with GPS verification, proving employees were on-site',
+      'Inspection records with pass/fail results, proving quality checks were performed',
+      'Issue tracking with timestamps and resolution, proving problems were addressed',
+      'Payroll records with approval audit trails, proving proper compensation',
     ],
     note: 'These records can be exported and provided to insurers, surety companies, or clients as part of your risk management documentation.',
   },

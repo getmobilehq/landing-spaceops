@@ -26,7 +26,7 @@ const integrations = [
     name: 'CSV Export',
     tag: 'All plans',
     body:
-      'Every data view — reports, payroll, activity logs — can be exported as CSV for use in Excel, Google Sheets, or any data tool.',
+      'Every data view (reports, payroll, activity logs) can be exported as CSV for use in Excel, Google Sheets, or any data tool.',
   },
   {
     name: 'PDF Reports',

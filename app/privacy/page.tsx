@@ -42,12 +42,12 @@ export default function PrivacyPage() {
       <LegalSection title="Third-party processors">
         <p>We rely on a small number of trusted sub-processors:</p>
         <ul className="list-disc pl-6 flex flex-col gap-1.5">
-          <li>Supabase — database and authentication</li>
-          <li>Stripe — subscription billing</li>
-          <li>Anthropic — AI features (executive summaries, floor plan detection)</li>
-          <li>Resend — transactional email</li>
-          <li>Vercel — hosting and delivery</li>
-          <li>Sentry — error monitoring</li>
+          <li>Supabase: database and authentication</li>
+          <li>Stripe: subscription billing</li>
+          <li>Anthropic: AI features (executive summaries, floor plan detection)</li>
+          <li>Resend: transactional email</li>
+          <li>Vercel: hosting and delivery</li>
+          <li>Sentry: error monitoring</li>
         </ul>
       </LegalSection>
       <LegalSection title="Your rights">

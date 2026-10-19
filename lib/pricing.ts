@@ -79,7 +79,7 @@ export const pricingTiers: PricingTier[] = [
 export const pricingFAQs = [
   {
     q: 'Is there really a free plan?',
-    a: 'Yes. The free plan includes one building and five team members with no time limit. You can run real operations on it — it\u2019s not a trial.',
+    a: 'Yes. The free plan includes one building and five team members with no time limit. You can run real operations on it. It\u2019s not a trial.',
   },
   {
     q: 'Can I upgrade or downgrade at any time?',
@@ -103,7 +103,7 @@ export const pricingFAQs = [
   },
   {
     q: 'What happens when I hit the free plan limits?',
-    a: 'You\u2019ll see a prompt to upgrade. Nothing breaks — you just can\u2019t add more buildings, rooms or team members until you upgrade or remove existing ones. Reports on Free cover the current month.',
+    a: 'You\u2019ll see a prompt to upgrade. Nothing breaks. You just can\u2019t add more buildings, rooms or team members until you upgrade or remove existing ones. Reports on Free cover the current month.',
   },
   {
     q: 'Do janitors need their own account?',
@@ -111,7 +111,7 @@ export const pricingFAQs = [
   },
   {
     q: 'Can my clients see the data?',
-    a: 'Yes. You can invite clients with a read-only client role. They see their buildings\u2019 pass rates, activity history, and open issues — but nothing about your internal operations, payroll, or other clients.',
+    a: 'Yes. You can invite clients with a read-only client role. They see their buildings\u2019 pass rates, activity history, and open issues, but nothing about your internal operations, payroll, or other clients.',
   },
   {
     q: 'Is there an API?',

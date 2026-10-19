@@ -18,7 +18,7 @@ export default function FeaturesPage() {
         <Container>
           <div className="max-w-[760px]">
             <h1 className="mb-7">
-              Every tool your operation needs — <span className="serif">in one place</span>.
+              Every tool your operation needs, <span className="serif">in one place</span>.
             </h1>
             <p className="lead">
               From scheduling to payroll, from inspections to client reporting. SpaceOPS covers the

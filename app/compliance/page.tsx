@@ -20,7 +20,7 @@ export default function CompliancePage() {
             </h1>
             <p className="lead">
               SpaceOPS helps facility management companies and cleaning operators stay on the
-              right side of federal and state regulations — from overtime calculations to GPS
+              right side of federal and state regulations, from overtime calculations to GPS
               tracking consent.
             </p>
           </div>

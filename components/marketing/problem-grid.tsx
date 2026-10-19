@@ -5,7 +5,7 @@ import { Reveal } from '@/components/ui/reveal';
 const problems = [
   {
     title: 'No visibility',
-    body: 'You don’t know if your team showed up, which rooms were cleaned, or whether quality standards were met — until a client complains.',
+    body: 'You don’t know if your team showed up, which rooms were cleaned, or whether quality standards were met, until a client complains.',
   },
   {
     title: 'Manual everything',
