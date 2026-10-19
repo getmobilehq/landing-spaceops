@@ -1,6 +1,7 @@
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/lib/site-config';
+import { HeroVideo } from './hero-video';
 
 type Kpi = {
   label: string;
@@ -70,7 +71,8 @@ const statusStyles: Record<Row['status'], string> = {
 
 export function Hero() {
   return (
-    <header className="night blueprint pt-[clamp(80px,11vw,148px)] pb-[clamp(80px,10vw,128px)] overflow-hidden">
+    <header className="night blueprint relative isolate pt-[clamp(80px,11vw,148px)] pb-[clamp(80px,10vw,128px)] overflow-hidden">
+      <HeroVideo />
       <Container>
         <div className="max-w-[920px]">
           <h1 className="mb-8 animate-fade-up" style={{ animationDelay: '0.04s' }}>
