@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { Eyebrow } from '@/components/ui/eyebrow';
 
 export default function NotFound() {
   return (
@@ -11,7 +10,6 @@ export default function NotFound() {
           <div className="font-display font-bold text-[96px] text-ink leading-none mb-6 tracking-[-0.035em]">
             404
           </div>
-          <Eyebrow className="mb-5">Not found</Eyebrow>
           <h1 className="mb-6">
             This page doesn&rsquo;t <span className="serif">exist</span>.
           </h1>

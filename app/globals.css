@@ -81,21 +81,6 @@
     line-height: 1.5;
   }
 
-  /* v3 eyebrow: Geist Mono 11px, +0.12em, with a square indigo marker that
-     echoes the inspected room in the mark. */
-  .eyebrow {
-    @apply inline-flex items-center gap-[10px] font-mono font-medium text-ink-4;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-  .eyebrow::before {
-    content: '';
-    width: 8px;
-    height: 8px;
-    flex-shrink: 0;
-    background: theme('colors.indigo.3');
-  }
 
   /* Night surfaces (header, hero, footer): text and accent flip for contrast;
      the single accent becomes indigo-light. */
@@ -114,12 +99,6 @@
   .night .serif {
     @apply text-indigo-light;
   }
-  .night .eyebrow {
-    @apply text-night-muted;
-  }
-  .night .eyebrow::before {
-    background: theme('colors.indigo.light');
-  }
 
   /* Indigo band (final CTA): the one accent surface on a page. */
   .indigo-band {
@@ -130,12 +109,6 @@
   }
   .indigo-band .serif {
     @apply text-white;
-  }
-  .indigo-band .eyebrow {
-    color: #c7d2fe;
-  }
-  .indigo-band .eyebrow::before {
-    background: #c7d2fe;
   }
 
   /* Blueprint grid behind the night hero: hairlines only, no glow. */

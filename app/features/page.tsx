@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { CtaFinal } from '@/components/marketing/cta-final';
 import { features } from '@/lib/features';
 import { buildMetadata } from '@/lib/utils';
@@ -18,7 +17,6 @@ export default function FeaturesPage() {
       <section className="pt-[clamp(96px,10vw,128px)] pb-[clamp(48px,6vw,80px)]">
         <Container>
           <div className="max-w-[760px]">
-            <Eyebrow className="mb-5">Features</Eyebrow>
             <h1 className="mb-7">
               Every tool your operation needs — <span className="serif">in one place</span>.
             </h1>
@@ -33,15 +31,12 @@ export default function FeaturesPage() {
       <section className="pb-[clamp(80px,9vw,128px)]">
         <Container>
           <div className="border-t border-line">
-            {features.map((f, i) => (
+            {features.map((f) => (
               <Link
                 key={f.slug}
                 href={`/features/${f.slug}`}
-                className="group grid grid-cols-1 md:grid-cols-[80px_1fr_auto] gap-6 md:gap-10 items-baseline py-8 md:py-10 border-b border-line hover:bg-bg-tint transition-colors duration-200 -mx-6 px-6"
+                className="group grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-baseline py-8 md:py-10 border-b border-line hover:bg-bg-tint transition-colors duration-200 -mx-6 px-6"
               >
-                <div className="font-mono text-[12px] text-ink-4 tracking-[0.06em] uppercase">
-                  {String(i + 1).padStart(2, '0')}
-                </div>
                 <div>
                   <h2 className="text-[24px] md:text-[28px] tracking-[-0.02em] mb-2 group-hover:text-indigo-3 transition-colors">
                     {f.name}

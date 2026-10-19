@@ -1,5 +1,4 @@
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { CtaFinal } from '@/components/marketing/cta-final';
 import { buildMetadata } from '@/lib/utils';
 
@@ -39,7 +38,6 @@ export default function AboutPage() {
       <section className="pt-[clamp(96px,10vw,128px)] pb-[clamp(48px,6vw,80px)]">
         <Container>
           <div className="max-w-[820px]">
-            <Eyebrow className="mb-5">About</Eyebrow>
             <h1 className="mb-10">
               We&rsquo;re building the future of <span className="serif">facility management</span>.
             </h1>
@@ -68,7 +66,6 @@ export default function AboutPage() {
       <section className="section">
         <Container>
           <div className="max-w-[720px] mb-16">
-            <Eyebrow className="mb-5">Principles</Eyebrow>
             <h2>
               What we <span className="serif">believe</span>.
             </h2>

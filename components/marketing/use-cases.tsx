@@ -31,7 +31,6 @@ export function UseCases() {
       <Container>
         <Reveal>
           <SectionHead
-            eyebrow="Who it's for"
             title={
               <>
                 Built for operations that <span className="serif">demand</span> accountability.
@@ -42,14 +41,11 @@ export function UseCases() {
 
         <Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {cases.map((c, i) => (
+            {cases.map((c) => (
               <article
                 key={c.title}
                 className="border border-line rounded-lg p-8 bg-bg-card flex gap-6 items-start transition-colors duration-200 hover:border-ink"
               >
-                <div className="font-mono text-[12px] text-ink-4 leading-none flex-shrink-0 pt-1.5">
-                  {String(i + 1).padStart(2, '0')}
-                </div>
                 <div>
                   <h3 className="text-[20px] leading-[1.25] mb-2 tracking-[-0.015em]">{c.title}</h3>
                   <p className="text-ink-3 text-[14.5px] leading-[1.55]">{c.body}</p>

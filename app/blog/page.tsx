@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { blogPosts } from '@/lib/blog';
 import { buildMetadata } from '@/lib/utils';
 
@@ -20,7 +19,6 @@ export default function BlogPage() {
       <section className="pt-[clamp(96px,10vw,128px)] pb-[clamp(48px,6vw,80px)]">
         <Container>
           <div className="max-w-[720px]">
-            <Eyebrow className="mb-5">Blog</Eyebrow>
             <h1 className="mb-7">
               Notes from the <span className="serif">floor</span>.
             </h1>

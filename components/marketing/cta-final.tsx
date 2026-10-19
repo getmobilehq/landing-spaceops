@@ -29,7 +29,6 @@ export function CtaFinal({
       <Container>
         <div className="py-[clamp(64px,9vw,112px)] grid grid-cols-1 lg:grid-cols-[minmax(0,1.5fr)_auto] gap-x-16 gap-y-8 items-end">
           <div>
-            <div className="eyebrow mb-5">Start today</div>
             <h2 className="max-w-[720px]">
               {headline}
               {accent && (
