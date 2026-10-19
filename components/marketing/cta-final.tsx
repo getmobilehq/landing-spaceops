@@ -11,7 +11,6 @@ export function CtaFinal({
   primaryExternal = true,
   secondaryLabel = 'Book a demo',
   secondaryHref = siteConfig.demoUrl,
-  subline = '1 building · 5 seats · 5 rooms · no time limit',
 }: {
   headline: string;
   accent?: string;
@@ -21,7 +20,6 @@ export function CtaFinal({
   primaryExternal?: boolean;
   secondaryLabel?: string;
   secondaryHref?: string;
-  subline?: string;
 }) {
   // v3 CTA band: the page's one indigo surface, title left, actions right.
   return (
@@ -39,11 +37,6 @@ export function CtaFinal({
               )}
             </h2>
             {lead && <p className="lead mt-5 !text-[#E0E7FF] max-w-[48ch]">{lead}</p>}
-            {subline && (
-              <div className="mt-6 font-mono text-[11.5px] tracking-[0.1em] uppercase text-[#C7D2FE]">
-                {subline}
-              </div>
-            )}
           </div>
           <div className="flex flex-wrap gap-3">
             <Button

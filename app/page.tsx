@@ -6,7 +6,6 @@ import { Steps } from '@/components/marketing/steps';
 import { RoleTabs } from '@/components/marketing/role-tabs';
 import { AISection } from '@/components/marketing/ai-section';
 import { UseCases } from '@/components/marketing/use-cases';
-import { TestimonialPlaceholder } from '@/components/marketing/testimonial';
 import { CtaFinal } from '@/components/marketing/cta-final';
 import { buildMetadata } from '@/lib/utils';
 import { siteConfig } from '@/lib/site-config';
@@ -28,7 +27,6 @@ export default function HomePage() {
       <RoleTabs />
       <AISection />
       <UseCases />
-      <TestimonialPlaceholder />
       <CtaFinal
         headline="Stop managing operations on"
         accent="gut feel."

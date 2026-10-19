@@ -62,11 +62,8 @@ export default function SecurityPage() {
       <section className="section">
         <Container>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 max-w-5xl">
-            {practices.map((p, i) => (
-              <div key={p.title} className="flex gap-6">
-                <div className="font-mono text-[12px] text-ink-4 tracking-[0.04em] pt-1 flex-shrink-0">
-                  {String(i + 1).padStart(2, '0')}
-                </div>
+            {practices.map((p) => (
+              <div key={p.title}>
                 <div>
                   <h3 className="text-[19px] mb-3 tracking-[-0.015em]">{p.title}</h3>
                   <p className="text-ink-3 text-[15px] leading-[1.6]">{p.body}</p>

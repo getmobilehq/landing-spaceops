@@ -97,13 +97,6 @@ export function Hero() {
               Book a demo →
             </Button>
           </div>
-          <div
-            className="inline-flex items-center gap-3 text-small text-night-muted animate-fade-up"
-            style={{ animationDelay: '0.28s' }}
-          >
-            <span className="w-2 h-2 flex-shrink-0 bg-indigo-light" aria-hidden="true" />
-            Trusted by facility managers running operations across multiple buildings and hundreds of rooms.
-          </div>
         </div>
 
         {/* Dashboard visual */}

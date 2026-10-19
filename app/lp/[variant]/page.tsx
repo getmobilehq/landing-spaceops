@@ -50,15 +50,10 @@ export default function LandingVariantPage({ params }: { params: { variant: stri
 
       <section className="section">
         <Container>
-          <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-4 mb-10">
-            What you get
-          </div>
+          <h2 className="text-[32px] mb-10 tracking-[-0.025em]">What you get</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
             {variant.keyMessages.map((msg, i) => (
-              <div key={i} className="flex gap-5 items-start border-t border-line pt-6">
-                <div className="font-mono text-[12px] text-indigo-3 tracking-[0.06em] pt-1 flex-shrink-0 w-8">
-                  {String(i + 1).padStart(2, '0')}
-                </div>
+              <div key={i} className="border-t border-line pt-6">
                 <p className="text-[17px] leading-[1.5] text-ink-2 tracking-[-0.005em]">{msg}</p>
               </div>
             ))}
