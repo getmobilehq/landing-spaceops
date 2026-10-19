@@ -33,7 +33,7 @@ const practices = [
   {
     title: 'Audit trails',
     body:
-      'Platform-level audit logging tracks every significant action — who did what, when, and what changed. Payroll runs include creator and approver attribution with timestamps.',
+      'Platform-level audit logging tracks every significant action: who did what, when, and what changed. Payroll runs include creator and approver attribution with timestamps.',
   },
   {
     title: 'API security',

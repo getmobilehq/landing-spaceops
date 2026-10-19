@@ -21,7 +21,7 @@ export function Footer() {
               {siteConfig.tagline}
             </p>
             <p className="text-[13px] text-night-muted max-w-[280px] leading-relaxed">
-              A product by {siteConfig.parent.name} — {siteConfig.parent.tagline.toLowerCase()}
+              A product by {siteConfig.parent.name}: {siteConfig.parent.tagline.toLowerCase()}
             </p>
           </div>
 

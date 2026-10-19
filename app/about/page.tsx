@@ -5,7 +5,7 @@ import { buildMetadata } from '@/lib/utils';
 export const metadata = buildMetadata({
   title: 'About',
   description:
-    'SpaceOPS is a product by Onyx Building Solutions. We’re building the Work Planning Tool for facility management — by facilities professionals, for facilities professionals.',
+    'SpaceOPS is a product by Onyx Building Solutions. We’re building the Work Planning Tool for facility management, built by facilities professionals for facilities professionals.',
   path: '/about',
 });
 
@@ -13,7 +13,7 @@ const values = [
   {
     title: 'Operational truth',
     body:
-      'We believe decisions should be based on data, not assumptions. SpaceOPS captures what actually happened — who showed up, what got done, how it scored — so you never have to guess.',
+      'We believe decisions should be based on data, not assumptions. SpaceOPS captures what actually happened: who showed up, what got done and how it scored. You never have to guess.',
   },
   {
     title: 'Role clarity',
@@ -23,7 +23,7 @@ const values = [
   {
     title: 'Transparency builds trust',
     body:
-      'The best way to retain clients is to show them the work. The client portal exists because we believe transparency isn’t a risk — it’s a competitive advantage.',
+      'The best way to retain clients is to show them the work. The client portal exists because we believe transparency isn’t a risk. It’s a competitive advantage.',
   },
   {
     title: 'Simplicity over features',
@@ -49,7 +49,7 @@ export default function AboutPage() {
               </p>
               <p>
                 We built SpaceOPS to change that. Not by adding complexity, but by giving every
-                person in the chain — from the janitor to the building owner — the right
+                person in the chain, from the janitor to the building owner, the right
                 information at the right time.
               </p>
               <p>

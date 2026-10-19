@@ -55,7 +55,7 @@ export function ContactForm() {
           ✓ Message sent
         </div>
         <h3 className="text-[22px] mb-3 tracking-[-0.015em]">
-          Thanks — we&rsquo;ll be in touch.
+          Thanks. We&rsquo;ll be in touch.
         </h3>
         <p className="text-ink-3 text-[15px] leading-[1.6]">
           We usually respond within one business day. If you&rsquo;d like to get started sooner,

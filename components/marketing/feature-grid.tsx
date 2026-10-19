@@ -129,7 +129,7 @@ const features: { icon: IconName; title: string; body: string }[] = [
     icon: 'portal',
     title: 'Client portal',
     body:
-      'Read-only dashboards for clients. SLA compliance, activity history, pass rates — transparency builds trust.',
+      'Read-only dashboards for clients. SLA compliance, activity history and pass rates. Transparency builds trust.',
   },
   {
     icon: 'payroll',

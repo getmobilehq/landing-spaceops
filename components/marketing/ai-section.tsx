@@ -50,11 +50,11 @@ export function AISection() {
               <p className="text-ink-3 text-[15px] leading-[1.6] mb-7">
                 An AI-generated executive summary analyses pass rates, highlights top and
                 bottom-performing buildings, flags trends, and summarises the operational picture
-                — in clear, professional language your clients will appreciate.
+                in clear, professional language your clients will appreciate.
               </p>
               <div className="bg-bg-tint border border-line rounded p-5 italic font-sans text-[14px] text-ink-2 leading-[1.6]">
                 &ldquo;Overall pass rate rose to 94.2% (+2.1 pts WoW), driven by sustained
-                improvement at Midtown Tower. Harbor Plaza continues to trail at 87% — the
+                improvement at Midtown Tower. Harbor Plaza continues to trail at 87%; the
                 restroom deep-clean checklist is the primary failure driver…&rdquo;
               </div>
             </article>

@@ -28,7 +28,7 @@ type Row = {
 
 const rows: Row[] = [
   {
-    activity: 'Nightly clean — Floors 3–8',
+    activity: 'Nightly clean, floors 3–8',
     building: 'Midtown Tower',
     assigned: 'M. Reyes +3',
     status: 'ok',
@@ -84,7 +84,7 @@ export function Hero() {
           >
             SpaceOPS replaces spreadsheets, WhatsApp groups, and guesswork with a single platform
             that manages your cleaning teams, tracks quality in real time, and proves performance
-            to clients — all from day one.
+            to clients from day one.
           </p>
           <div
             className="flex flex-wrap gap-4 mb-8 animate-fade-up"
@@ -108,7 +108,7 @@ export function Hero() {
           <div className="flex items-center justify-between pb-5 border-b border-line mb-6">
             <div className="flex items-center gap-[10px] font-mono text-[12px] text-ink-3 tracking-[0.04em]">
               <span className="w-1.5 h-1.5 bg-success" />
-              <span>OPS / Midtown Tower — Live</span>
+              <span>OPS / Midtown Tower · Live</span>
             </div>
             <div className="flex gap-1">
               {['Today', '7 days', '30 days'].map((tab, i) => (

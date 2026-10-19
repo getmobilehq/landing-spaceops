@@ -14,7 +14,7 @@ export type BlogPost = {
 export const blogPosts: BlogPost[] = [
   {
     slug: 'welcome-to-spaceops',
-    title: 'Welcome to SpaceOPS — a note on what we\u2019re building and why.',
+    title: 'Welcome to SpaceOPS: a note on what we\u2019re building and why.',
     excerpt:
       'The cleaning industry runs on paper, group chats, and trust. We\u2019re changing that without adding complexity.',
     date: '2026-04-18',
@@ -25,7 +25,7 @@ export const blogPosts: BlogPost[] = [
     body: [
       'The cleaning industry is one of the last corners of commercial real estate that runs on a combination of paper timesheets, WhatsApp groups, and personal trust. We\u2019ve lived inside it long enough to know: the people doing the work are exceptional. The systems around them are not.',
       'SpaceOPS exists to change that without adding complexity. Every decision we make about the product comes back to one question: does this make the work more visible, or does it just add another screen to tap through?',
-      'This blog is where we\u2019ll share what we\u2019re learning as we build — honest notes on operations, data, and the parts of this industry that deserve more attention than they get. Thanks for being here.',
+      'This blog is where we\u2019ll share what we\u2019re learning as we build: honest notes on operations, data, and the parts of this industry that deserve more attention than they get. Thanks for being here.',
     ],
   },
   // Coming soon placeholders — from the content doc blog post ideas
