@@ -20,12 +20,6 @@ export function AISection() {
           {/* Floor plan vectorisation */}
           <Reveal>
             <article className="border border-line rounded-lg p-10 bg-bg-card">
-              <div className="inline-flex items-center gap-2 font-mono text-[11px] text-indigo-3 tracking-[0.12em] uppercase mb-5 font-medium">
-                <span
-                  className="w-2 h-2 bg-indigo-3"
-                />
-                Floor plan vectorisation
-              </div>
               <h3 className="text-[24px] leading-[1.2] mb-3 tracking-[-0.015em]">
                 Upload a floor plan. Get rooms in seconds.
               </h3>
@@ -34,9 +28,6 @@ export function AISection() {
                 a static image. What used to take an hour of manual setup now takes seconds.
               </p>
               <div className="bg-bg-tint border border-line rounded p-5 font-mono text-[12.5px] text-ink-2 leading-[1.6]">
-                <div className="block text-[10.5px] text-ink-4 tracking-[0.12em] uppercase mb-2.5">
-                  Detection Output
-                </div>
                 → 47 rooms detected
                 <br />
                 → 3 floors mapped
@@ -53,12 +44,6 @@ export function AISection() {
           {/* Executive summaries */}
           <Reveal>
             <article className="border border-line rounded-lg p-10 bg-bg-card">
-              <div className="inline-flex items-center gap-2 font-mono text-[11px] text-indigo-3 tracking-[0.12em] uppercase mb-5 font-medium">
-                <span
-                  className="w-2 h-2 bg-indigo-3"
-                />
-                Executive summaries
-              </div>
               <h3 className="text-[24px] leading-[1.2] mb-3 tracking-[-0.015em]">
                 Every report, written for the boardroom.
               </h3>
@@ -68,9 +53,6 @@ export function AISection() {
                 — in clear, professional language your clients will appreciate.
               </p>
               <div className="bg-bg-tint border border-line rounded p-5 italic font-sans text-[14px] text-ink-2 leading-[1.6]">
-                <div className="block not-italic font-mono text-[10.5px] text-ink-4 tracking-[0.12em] uppercase mb-2.5">
-                  Sample
-                </div>
                 &ldquo;Overall pass rate rose to 94.2% (+2.1 pts WoW), driven by sustained
                 improvement at Midtown Tower. Harbor Plaza continues to trail at 87% — the
                 restroom deep-clean checklist is the primary failure driver…&rdquo;

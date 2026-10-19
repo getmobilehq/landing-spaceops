@@ -67,9 +67,7 @@ export default function FeatureDetailPage({ params }: { params: { slug: string }
 
             <aside className="lg:sticky lg:top-24 self-start">
               <div className="border border-line rounded-lg p-7 bg-bg-card">
-                <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-4 mb-4">
-                  Key capabilities
-                </div>
+                <h2 className="text-[24px] mb-5 tracking-[-0.02em]">Key capabilities</h2>
                 <ul className="flex flex-col gap-3">
                   {feature.keyPoints.map((kp) => (
                     <li key={kp} className="flex items-start gap-3 text-[14.5px] text-ink-2">
@@ -101,9 +99,7 @@ export default function FeatureDetailPage({ params }: { params: { slug: string }
       {/* Related */}
       <section className="section">
         <Container>
-          <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-4 mb-8">
-            Related capabilities
-          </div>
+          <h2 className="text-[28px] mb-8 tracking-[-0.02em]">Related capabilities</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {others.map((f) => (
               <Link

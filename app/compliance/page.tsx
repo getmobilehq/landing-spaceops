@@ -112,9 +112,7 @@ export default function CompliancePage() {
 
                   {s.keyPoints && (
                     <div className="mt-8 p-6 border border-line rounded-lg bg-bg-card">
-                      <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-indigo-3 mb-4 font-medium">
-                        Key features
-                      </div>
+                      <h3 className="text-[20px] mb-4 tracking-[-0.015em]">Key features</h3>
                       <ul className="flex flex-col gap-2.5">
                         {s.keyPoints.map((kp) => (
                           <li
@@ -140,9 +138,6 @@ export default function CompliancePage() {
 
                   {s.note && (
                     <div className="mt-6 pl-5 border-l-2 border-line-strong text-[14.5px] text-ink-3 italic leading-[1.65]">
-                      <span className="not-italic font-mono text-[10.5px] uppercase tracking-[0.08em] text-ink-4 mr-2">
-                        Note
-                      </span>
                       {s.note}
                     </div>
                   )}
@@ -151,9 +146,7 @@ export default function CompliancePage() {
 
               {/* Disclaimer */}
               <div className="mt-20 pt-10 border-t border-line">
-                <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-ink-4 mb-4">
-                  Important disclaimer
-                </div>
+                <h2 className="text-[22px] mb-4 tracking-[-0.02em]">Important disclaimer</h2>
                 <p className="text-ink-3 text-[14px] leading-[1.7]">
                   SpaceOPS is a facility management platform, not a legal compliance service. The
                   information on this page is provided for general guidance only and does not
