@@ -31,7 +31,6 @@ export function Steps() {
       <Container>
         <Reveal>
           <SectionHead
-            eyebrow="Onboarding"
             title={
               <>
                 Up and running in <span className="serif">under ten</span> minutes.

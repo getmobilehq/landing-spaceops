@@ -145,7 +145,6 @@ export function FeatureGrid({ anchorId }: { anchorId?: string }) {
       <Container>
         <Reveal>
           <SectionHead
-            eyebrow="Capabilities"
             title={
               <>
                 Everything you need to run a <span className="serif">best-in-class</span> operation.

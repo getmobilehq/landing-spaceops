@@ -1,6 +1,7 @@
 export type ComplianceSection = {
   id: string;
-  eyebrow: string;
+  /** Label in the "On this page" navigation. */
+  navLabel: string;
   headline: string;
   paragraphs: string[];
   subsections?: { title: string; body: string }[];
@@ -12,7 +13,7 @@ export type ComplianceSection = {
 export const complianceSections: ComplianceSection[] = [
   {
     id: 'flsa',
-    eyebrow: 'Section A — FLSA',
+    navLabel: 'Section A — FLSA',
     headline: 'FLSA-ready timekeeping and overtime.',
     paragraphs: [
       'The Fair Labor Standards Act requires employers to keep accurate records of hours worked and to pay non-exempt employees overtime (1.5x) for any hours exceeding 40 in a workweek.',
@@ -42,7 +43,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'state-overtime',
-    eyebrow: 'Section B — State laws',
+    navLabel: 'Section B — State laws',
     headline: 'State-level overtime rules vary — SpaceOPS adapts.',
     paragraphs: [
       'Several states have overtime rules that go beyond the federal FLSA standard. SpaceOPS\u2019s per-employee configuration lets you handle these variations.',
@@ -65,7 +66,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'gps-privacy',
-    eyebrow: 'Section C — GPS & privacy',
+    navLabel: 'Section C — GPS & privacy',
     headline: 'GPS verification done right — with transparency.',
     paragraphs: [
       'SpaceOPS uses GPS location at the moment of clock-in to verify that an employee is within the building\u2019s geofence radius. This is a single location check, not continuous tracking.',
@@ -102,7 +103,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'biometric',
-    eyebrow: 'Section D — Biometric privacy',
+    navLabel: 'Section D — Biometric privacy',
     headline: 'SpaceOPS does not collect biometric data.',
     paragraphs: [
       'Several states — most notably Illinois (BIPA), Texas (CUBI), and Washington — regulate the collection of biometric data such as fingerprints, facial scans, and retina patterns.',
@@ -112,7 +113,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'osha',
-    eyebrow: 'Section E — OSHA',
+    navLabel: 'Section E — OSHA',
     headline: 'Support your OSHA obligations with better documentation.',
     paragraphs: [
       'The Occupational Safety and Health Administration (OSHA) requires employers to maintain safe workplaces and document certain incidents. While SpaceOPS is not an OSHA compliance tool, its issue tracking and inspection features support workplace safety practices.',
@@ -135,7 +136,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'janitorial',
-    eyebrow: 'Section F — Industry regulations',
+    navLabel: 'Section F — Industry regulations',
     headline: 'Regulations specific to the cleaning industry.',
     paragraphs: [],
     subsections: [
@@ -159,7 +160,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'retention',
-    eyebrow: 'Section G — Data retention',
+    navLabel: 'Section G — Data retention',
     headline: 'Data retention, access, and deletion.',
     paragraphs: [
       'SpaceOPS retains attendance, payroll, and user data for as long as the organisation\u2019s account is active. Organisations can export all data (CSV) at any time. Upon account deletion, all organisation data is permanently removed.',
@@ -182,7 +183,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'joint-employer',
-    eyebrow: 'Section H — Joint employer',
+    navLabel: 'Section H — Joint employer',
     headline: 'Understand joint employer risks in facility management.',
     paragraphs: [
       'In the cleaning industry, joint employer liability is a significant concern. When a property management company or building owner exerts control over a cleaning contractor\u2019s workers — schedules, supervision, pay — they may be deemed a joint employer under the FLSA and NLRA.',
@@ -197,7 +198,7 @@ export const complianceSections: ComplianceSection[] = [
   },
   {
     id: 'insurance',
-    eyebrow: 'Section I — Insurance & bonding',
+    navLabel: 'Section I — Insurance & bonding',
     headline: 'Documentation that supports your insurance requirements.',
     paragraphs: [
       'Many commercial cleaning contracts require proof of quality control processes, employee tracking, and incident documentation for insurance and bonding purposes.',

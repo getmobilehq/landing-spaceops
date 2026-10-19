@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { Button } from '@/components/ui/button';
 import { CtaFinal } from '@/components/marketing/cta-final';
 import { features, getFeature } from '@/lib/features';
@@ -45,7 +44,6 @@ export default function FeatureDetailPage({ params }: { params: { slug: string }
       <section className="pb-[clamp(56px,7vw,96px)]">
         <Container>
           <div className="max-w-[820px]">
-            <Eyebrow className="mb-5">{feature.name}</Eyebrow>
             <h1 className="mb-7">{feature.headline}</h1>
             <p className="lead max-w-[680px]">{feature.oneLiner}</p>
           </div>

@@ -23,7 +23,6 @@ export function ProblemGrid() {
       <Container>
         <Reveal>
           <SectionHead
-            eyebrow="The status quo"
             title={
               <>
                 Running cleaning operations <span className="serif">shouldn’t</span> feel like this.
@@ -33,11 +32,10 @@ export function ProblemGrid() {
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
-          {problems.map((p, i) => (
+          {problems.map((p) => (
             <Reveal key={p.title}>
-              {/* v3 feature card: 2px ink rule, mono number, Arvo title, no box. */}
+              {/* v3 feature card: 2px ink rule, Arvo title, no box. */}
               <article className="grid gap-3.5 content-start pt-6 border-t-2 border-ink">
-                <div className="font-mono text-[12px] text-ink-4">{String(i + 1).padStart(2, '0')}</div>
                 <h3 className="text-[22px] leading-[1.2] tracking-[-0.015em]">{p.title}</h3>
                 <p className="text-ink-3 text-[15px] leading-[1.6]">{p.body}</p>
               </article>

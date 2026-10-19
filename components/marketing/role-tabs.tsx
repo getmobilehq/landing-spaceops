@@ -11,8 +11,6 @@ type RoleId = 'admin' | 'supervisor' | 'janitor' | 'client';
 type RoleData = {
   id: RoleId;
   label: string;
-  num: string;
-  eyebrow: string;
   title: string;
   body: string;
   features: string[];
@@ -22,8 +20,6 @@ const roles: RoleData[] = [
   {
     id: 'admin',
     label: 'Admin',
-    num: '01',
-    eyebrow: 'The command centre',
     title: 'Full control, end-to-end.',
     body:
       'Total oversight of buildings, users, clients, checklists, reports, payroll, and billing. Every operational lever in one place, without the clutter of role-specific views you don’t need.',
@@ -37,8 +33,6 @@ const roles: RoleData[] = [
   {
     id: 'supervisor',
     label: 'Supervisor',
-    num: '02',
-    eyebrow: 'Day-to-day operations',
     title: 'The operator’s cockpit.',
     body:
       'Manage assigned buildings: create activities, assign tasks, run inspections, monitor attendance, and handle issues. A focused view on execution without admin-level noise.',
@@ -52,8 +46,6 @@ const roles: RoleData[] = [
   {
     id: 'janitor',
     label: 'Janitor',
-    num: '03',
-    eyebrow: 'Mobile-first',
     title: 'Clock in. See the work. Get it done.',
     body:
       'A focused mobile experience built for the floor. Clock in, see today’s assigned rooms, complete tasks, and report issues. No clutter, no confusion, no tutorials.',
@@ -67,8 +59,6 @@ const roles: RoleData[] = [
   {
     id: 'client',
     label: 'Client',
-    num: '04',
-    eyebrow: 'Transparency, not control',
     title: 'Proof that the job is being done well.',
     body:
       'A read-only dashboard scoped to their buildings: SLA compliance, activity pass rates, open issues, recent history. Trust through visibility — never see your internal data, only the work that affects them.',
@@ -90,7 +80,6 @@ export function RoleTabs() {
       <Container>
         <Reveal>
           <SectionHead
-            eyebrow="Role-based experience"
             title={
               <>
                 Built for <span className="serif">every role</span> in your organisation.
@@ -121,9 +110,6 @@ export function RoleTabs() {
                       : 'text-ink-3 hover:text-ink md:border-l-line',
                   )}
                 >
-                  <span className="font-mono text-[10.5px] text-ink-4 tracking-[0.08em] uppercase mr-2">
-                    {r.num}
-                  </span>
                   {r.label}
                 </button>
               ))}
@@ -134,9 +120,6 @@ export function RoleTabs() {
               key={current.id}
               className="border border-line rounded-lg p-8 md:p-10 bg-bg-card min-h-[320px] animate-fade-up"
             >
-              <div className="font-mono text-[11px] text-indigo-3 tracking-[0.08em] uppercase mb-4">
-                {current.eyebrow}
-              </div>
               <h3 className="text-[28px] leading-[1.15] mb-4 tracking-[-0.02em] text-ink">
                 {current.title}
               </h3>

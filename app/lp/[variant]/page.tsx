@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation';
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { CtaFinal } from '@/components/marketing/cta-final';
 import { lpVariants, getLpVariant } from '@/lib/lp-variants';
 import { siteConfig } from '@/lib/site-config';
@@ -31,7 +30,6 @@ export default function LandingVariantPage({ params }: { params: { variant: stri
       <section className="pt-[clamp(96px,10vw,148px)] pb-[clamp(72px,9vw,128px)]">
         <Container>
           <div className="max-w-[920px]">
-            <Eyebrow className="mb-5">{variant.persona}</Eyebrow>
             <h1 className="mb-8">
               {variant.headline}
               <br />

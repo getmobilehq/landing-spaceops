@@ -8,7 +8,6 @@ export function AISection() {
       <Container>
         <Reveal>
           <SectionHead
-            eyebrow="AI, where it matters"
             title={
               <>
                 AI that actually <span className="serif">saves</span> you time.

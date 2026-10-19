@@ -14,7 +14,6 @@ export const metadata = buildMetadata({
 export default function TermsPage() {
   return (
     <LegalPageLayout
-      eyebrow="Legal"
       title="Terms of Service"
       lastUpdated="18 April 2026"
       placeholder

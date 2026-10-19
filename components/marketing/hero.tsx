@@ -1,6 +1,5 @@
 import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { siteConfig } from '@/lib/site-config';
 
 type Kpi = {
@@ -74,7 +73,6 @@ export function Hero() {
     <header className="night blueprint pt-[clamp(80px,11vw,148px)] pb-[clamp(80px,10vw,128px)] overflow-hidden">
       <Container>
         <div className="max-w-[920px]">
-          <Eyebrow className="mb-5 animate-fade-up">Facility operations, rebuilt</Eyebrow>
           <h1 className="mb-8 animate-fade-up" style={{ animationDelay: '0.04s' }}>
             The <span className="serif">Work Planning Tool</span>
             <br />

@@ -1,5 +1,4 @@
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { complianceSections } from '@/lib/compliance';
 import { buildMetadata } from '@/lib/utils';
 
@@ -16,7 +15,6 @@ export default function CompliancePage() {
       <section className="pt-[clamp(96px,10vw,128px)] pb-[clamp(48px,6vw,80px)]">
         <Container>
           <div className="max-w-[820px]">
-            <Eyebrow className="mb-5">Compliance</Eyebrow>
             <h1 className="mb-7">
               Built with US labour and privacy regulations <span className="serif">in mind</span>.
             </h1>
@@ -44,7 +42,7 @@ export default function CompliancePage() {
                       href={`#${s.id}`}
                       className="block text-small text-ink-3 hover:text-ink transition-colors leading-tight"
                     >
-                      {s.eyebrow}
+                      {s.navLabel}
                     </a>
                   </li>
                 ))}
@@ -59,7 +57,6 @@ export default function CompliancePage() {
                   id={s.id}
                   className={`scroll-mt-24 ${idx !== 0 ? 'mt-20 pt-20 border-t border-line' : ''}`}
                 >
-                  <Eyebrow className="mb-4">{s.eyebrow}</Eyebrow>
                   <h2 className="text-[28px] md:text-[32px] mb-6 tracking-[-0.025em] leading-[1.15]">
                     {s.headline}
                   </h2>

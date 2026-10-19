@@ -1,5 +1,4 @@
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { ContactForm } from '@/components/marketing/contact-form';
 import { buildMetadata } from '@/lib/utils';
 
@@ -16,7 +15,6 @@ export default function ContactPage() {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 max-w-6xl">
           <div>
-            <Eyebrow className="mb-5">Contact</Eyebrow>
             <h1 className="mb-7">
               Let&rsquo;s <span className="serif">talk</span>.
             </h1>

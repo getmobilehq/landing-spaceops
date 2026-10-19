@@ -1,15 +1,12 @@
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import type { ReactNode } from 'react';
 
 export function LegalPageLayout({
-  eyebrow,
   title,
   lastUpdated,
   placeholder,
   children,
 }: {
-  eyebrow: string;
   title: ReactNode;
   lastUpdated: string;
   placeholder?: boolean;
@@ -20,7 +17,6 @@ export function LegalPageLayout({
       <section className="pt-[clamp(96px,10vw,128px)] pb-[clamp(48px,6vw,80px)]">
         <Container>
           <div className="max-w-[780px]">
-            <Eyebrow className="mb-5">{eyebrow}</Eyebrow>
             <h1 className="mb-5">{title}</h1>
             <div className="font-mono text-[12px] uppercase tracking-[0.06em] text-ink-4">
               Last updated: {lastUpdated}

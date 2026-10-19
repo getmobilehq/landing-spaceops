@@ -1,5 +1,4 @@
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { CtaFinal } from '@/components/marketing/cta-final';
 import { buildMetadata } from '@/lib/utils';
 
@@ -49,7 +48,6 @@ export default function IntegrationsPage() {
       <section className="pt-[clamp(96px,10vw,128px)] pb-[clamp(48px,6vw,80px)]">
         <Container>
           <div className="max-w-[760px]">
-            <Eyebrow className="mb-5">Integrations</Eyebrow>
             <h1 className="mb-7">
               SpaceOPS fits into <span className="serif">your workflow</span>.
             </h1>

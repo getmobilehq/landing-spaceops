@@ -1,5 +1,4 @@
 import { Container } from '@/components/ui/container';
-import { Eyebrow } from '@/components/ui/eyebrow';
 import { SectionHead } from '@/components/ui/section-head';
 import { Accordion } from '@/components/ui/accordion';
 import { PricingTable } from '@/components/marketing/pricing-table';
@@ -20,7 +19,6 @@ export default function PricingPage() {
       <section className="pt-[clamp(96px,10vw,128px)] pb-[clamp(64px,7vw,96px)]">
         <Container>
           <div className="max-w-[720px]">
-            <Eyebrow className="mb-5">Pricing</Eyebrow>
             <h1 className="mb-7">
               Simple pricing. <span className="serif">No</span> surprises.
             </h1>
@@ -40,7 +38,6 @@ export default function PricingPage() {
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 lg:gap-20 items-start">
             <SectionHead
-              eyebrow="Frequently asked"
               title={
                 <>
                   Answers, <span className="serif">straight</span>.
