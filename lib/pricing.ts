@@ -70,8 +70,8 @@ export const pricingTiers: PricingTier[] = [
       'Dedicated onboarding',
       'Custom integrations',
       'Priority support with SLA',
-      'Single sign-on (SSO)',
-      'Custom data retention',
+      'Single sign-on (SSO), on the roadmap',
+      'Data retention agreed in your contract',
     ],
   },
 ];
