@@ -43,7 +43,8 @@ export const pricingTiers: PricingTier[] = [
     tagline: 'For growing cleaning operations',
     priceMonthly: 149,
     priceYearly: 1490,
-    ctaLabel: 'Start Pro trial',
+    // Sign-up always starts on Free; there's no trial yet (spaceops2#34).
+    ctaLabel: 'Start free, upgrade anytime',
     ctaHref: 'https://app.onyxspaceops.com/register?plan=pro',
     highlighted: true,
     includesHeader: 'Everything in Free, plus:',
